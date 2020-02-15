@@ -2,6 +2,7 @@ import board
 import neopixel
 import datetime
 from brightness import *
+from importlib import reload
 
 # initialize system
 pixels = neopixel.NeoPixel(board.D18, 288)
