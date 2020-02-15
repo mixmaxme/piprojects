@@ -291,7 +291,7 @@ while True:
      
      # store old minute
           olddayminute=dayminute
-          print("Script running")
+          print("Script running" x, y, z)
 
 
     
