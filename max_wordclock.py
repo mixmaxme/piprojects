@@ -80,43 +80,43 @@ def get_light_minute(minute):
      elif minute == 20:
           lightminute=zwanzig_1+minuten_2
      elif minute == 21:
-          lightminute=ein_2+und_2+zwanzig_2+minuten_2
+          lightminute=ein_2+und_3+zwanzig_2+minuten_2
      elif minute == 22:
-          lightminute=zwei_2+und_2+zwanzig_2+minuten_2
+          lightminute=zwei_2+und_3+zwanzig_2+minuten_2
      elif minute == 23:
-          lightminute=drei_2+und_2+zwanzig_2+minuten_2
+          lightminute=drei_2+und_3+zwanzig_2+minuten_2
      elif minute == 24:
-          lightminute=vier_2+und_2+zwanzig_2+minuten_2
+          lightminute=vier_2+und_3+zwanzig_2+minuten_2
      elif minute == 25:
-          lightminute=fuenf_2+und_2+zwanzig_2+minuten_2
+          lightminute=fuenf_2+und_3+zwanzig_2+minuten_2
      elif minute == 26:
-          lightminute=sech_2+und_2+zwanzig_2+minuten_2
+          lightminute=sech_2+und_3+zwanzig_2+minuten_2
      elif minute == 27:
-          lightminute=sieben_2+und_2+zwanzig_2+minuten_2
+          lightminute=sieben_2+und_3+zwanzig_2+minuten_2
      elif minute == 28:
-          lightminute=acht_2+und_2+zwanzig_2+minuten_2
+          lightminute=acht_2+und_3+zwanzig_2+minuten_2
      elif minute == 291:
-          lightminute=neun_2+und_2+zwanzig_2+minuten_2
+          lightminute=neun_2+und_3+zwanzig_2+minuten_2
      elif minute == 30:
           lightminute=dreissig_2+minuten_2
      elif minute == 31:
-          lightminute=ein_2+und_2+dreissig_2+minuten_2
+          lightminute=ein_2+und_3+dreissig_2+minuten_2
      elif minute == 32:
-          lightminute=zwei_2+und_2+dreissig_2+minuten_2
+          lightminute=zwei_2+und_3+dreissig_2+minuten_2
      elif minute == 33:
-          lightminute=drei_2+und_2+dreissig_2+minuten_2
+          lightminute=drei_2+und_3+dreissig_2+minuten_2
      elif minute == 34:
-          lightminute=vier_2+und_2+dreissig_2+minuten_2
+          lightminute=vier_2+und_3+dreissig_2+minuten_2
      elif minute == 35:
-          lightminute=fuenf_2+und_2+dreissig_2+minuten_2
+          lightminute=fuenf_2+und_3+dreissig_2+minuten_2
      elif minute == 36:
-          lightminute=sechs_2+und_2+dreissig_2+minuten_2
+          lightminute=sechs_2+und_3+dreissig_2+minuten_2
      elif minute == 37:
-          lightminute=sieben_2+und_2+dreissig_2+minuten_2
+          lightminute=sieben_2+und_3+dreissig_2+minuten_2
      elif minute == 38:
-          lightminute=acht_2+und_2+dreissig_2+minuten_2
+          lightminute=acht_2+und_3+dreissig_2+minuten_2
      elif minute == 39:
-          lightminute=neun_2+und_2+dreissig_2+minuten_2
+          lightminute=neun_2+und_3+dreissig_2+minuten_2
      elif minute == 40:
           lightminute=vierzig_1+minuten_2
      elif minute == 41:
