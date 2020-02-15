@@ -294,6 +294,7 @@ while True:
           del x
           del y
           del z
+          del brightness
           print("Script running")
 
 
