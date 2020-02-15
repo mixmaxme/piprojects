@@ -1,8 +1,8 @@
 import board
 import neopixel
 import datetime
-import RPi.GPIO as GPIO
-import time
+import importlib
+from brightness import *
 
 # initialize system
 pixels = neopixel.NeoPixel(board.D18, 288)
@@ -283,7 +283,7 @@ while True:
      
      if dayminute != olddayminute:
           # check brightness
-          from brightness import *
+          importlib.reload(brightness)
           pixels.fill((0,0,0))
      
           for i in es+ist+lighthour+uhr+und_2+lightminute+tageszeit:
@@ -294,7 +294,6 @@ while True:
           del x
           del y
           del z
-          del brightness
           print("Script running")
 
 
