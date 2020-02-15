@@ -275,20 +275,19 @@ while True:
           if dayhour < 4:
             tageszeit = frueh
     
-     # check brightness
-     x=100
-     y=100
-     z=100
+
      
      # check and light h
      lighthour = get_light_hour(dayhour)
      lightminute = get_light_minute(dayminute)
      
      if dayminute != olddayminute:
-         pixels.fill((0,0,0))
+          # check brightness
+          from brightness import *
+          pixels.fill((0,0,0))
      
-         for i in es+ist+lighthour+uhr+und_2+lightminute+tageszeit:
-             pixels[i]=(x,y,z)
+          for i in es+ist+lighthour+uhr+und_2+lightminute+tageszeit:
+               pixels[i]=(x,y,z)
      
      # store old minute
          olddayminute=dayminute
