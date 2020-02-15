@@ -290,8 +290,8 @@ while True:
                pixels[i]=(x,y,z)
      
      # store old minute
-         olddayminute=dayminute
-         print("Script running")
+          olddayminute=dayminute
+          print("Script running")
 
 
     
