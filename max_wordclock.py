@@ -33,6 +33,8 @@ def get_light_hour(hour):
           lighthour=elf_1
      elif hour == 12:
           lighthour=zwoelf_1
+     elif hour == 0:
+          lighthour=null_1
      return lighthour
 
 def get_light_minute(minute):
