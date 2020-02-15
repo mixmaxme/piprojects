@@ -1,7 +1,6 @@
 import board
 import neopixel
 import datetime
-import importlib
 from brightness import *
 
 # initialize system
@@ -283,9 +282,7 @@ while True:
      
      if dayminute != olddayminute:
           # check brightness
-          importlib.reload(x)
-          importlib.reload(y)
-          importlib.reload(z)
+          from brightness import *
           pixels.fill((0,0,0))
      
           for i in es+ist+lighthour+uhr+und_2+lightminute+tageszeit:
