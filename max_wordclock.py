@@ -283,7 +283,9 @@ while True:
      
      if dayminute != olddayminute:
           # check brightness
-          importlib.reload(brightness)
+          importlib.reload(x)
+          importlib.reload(y)
+          importlib.reload(z)
           pixels.fill((0,0,0))
      
           for i in es+ist+lighthour+uhr+und_2+lightminute+tageszeit:
