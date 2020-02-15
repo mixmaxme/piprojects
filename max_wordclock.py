@@ -269,7 +269,7 @@ while True:
                tageszeit = abends
           elif dayhour > 9:
                tageszeit = nachts
-          elif dayhour == 12:
+          elif dayhour == 0:
                tageszeit = mitternacht
      else:
           tageszeit = morgens
