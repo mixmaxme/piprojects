@@ -271,13 +271,19 @@ while True:
                tageszeit = abends
           elif dayhour > 9:
                tageszeit = nachts
-          elif dayhour == 0:
-               tageszeit = mitternacht
+          
      else:
           tageszeit = morgens
-          if dayhour < 4:
-            tageszeit = frueh
-    
+          if dayhour == 1:
+               tageszeit = nachts
+          elif dayhour == 2:
+               tageszeit = frueh
+          elif dayhour == 3:
+               tageszeit = frueh
+          elif dayhour == 4:
+               tageszeit = frueh
+          elif dayhour == 0:
+               tageszeit = mitternacht
 
      
      # check and light h
