@@ -98,7 +98,7 @@ def get_light_minute(minute):
      elif minute == 25:
           lightminute=fuenf_2+und_3+zwanzig_2+minuten_2
      elif minute == 26:
-          lightminute=sech_2+und_3+zwanzig_2+minuten_2
+          lightminute=sechs_2+und_3+zwanzig_2+minuten_2
      elif minute == 27:
           lightminute=sieben_2+und_3+zwanzig_2+minuten_2
      elif minute == 28:
