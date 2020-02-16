@@ -16,7 +16,6 @@ oncount=0
 
 # Hourfunction
 def get_light_hour(hour):
-     print(hour)
      if hour == 1:
           lighthour=eins_1
      elif hour == 2:
@@ -272,11 +271,7 @@ while True:
      dayminute = daynow.minute
      
      # perform script only when time (minute) has changed
-     if dayminute != olddayminute:
-          # check and light h
-          lighthour = get_light_hour(dayhour)
-          lightminute = get_light_minute(dayminute)
-          
+     if dayminute != olddayminute:          
           # get timerange of the day
           if dayhour > 12:
                dayhour = dayhour-12
@@ -298,7 +293,11 @@ while True:
                     tageszeit = frueh
                elif dayhour == 0:
                     tageszeit = mitternacht
-               
+                    
+          # check and light h
+          lighthour = get_light_hour(dayhour)
+          lightminute = get_light_minute(dayminute)
+          
           # check brightness
           reload( brightness )
           from brightness import *
