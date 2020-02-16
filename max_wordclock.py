@@ -1,16 +1,19 @@
 import board
-import neopixel
-import datetime
-import time
+import neopixel                    # to control LEDs
+import datetime                    # for datetime management
+import time                        # for sleep/timing commands
 from importlib import reload
 import brightness
-from brightness import *
+from brightness import *           # to load/reload variables from file
 
 # initialize system
 pixels = neopixel.NeoPixel(board.D18, 288)
 pixels.fill((0,0,0))
 olddayminute=0
 
+# define functions
+
+# Hourfunction
 def get_light_hour(hour):
      if hour == 1:
           lighthour=eins_1
@@ -40,6 +43,7 @@ def get_light_hour(hour):
           lighthour=null_1
      return lighthour
 
+# Minutefunction
 def get_light_minute(minute):
      if minute == 0:
           lightminute=null_2+minuten_2
@@ -165,7 +169,7 @@ def get_light_minute(minute):
           lightminute=zwoelf_2
      return lightminute
 
-# define all words
+# define all occurring words of 24h wordclock (take care - alternating LED numbering)
 # Zeile 1
 es=(0,1)
 ist=(3,4,5)
@@ -258,63 +262,68 @@ morgens=(287,286,285,284,283,282,281)
 warm=(280,279,278,277)
 mittags=(276,275,274.273,272,271,270)
 
+# Start actual infinite while loop to run script
 while True:
      # get current time
      daynow = datetime.datetime.now()
      dayhour = daynow.hour
      dayminute = daynow.minute
-
-     # get morning or afternoon
-     if dayhour > 12:
-          dayhour = dayhour-12
-          tageszeit = mittags
-          if dayhour > 5:
-               tageszeit = abends
-          elif dayhour > 9:
-               tageszeit = nachts
-          
-     else:
-          tageszeit = morgens
-          if dayhour == 1:
-               tageszeit = nachts
-          elif dayhour == 2:
-               tageszeit = frueh
-          elif dayhour == 3:
-               tageszeit = frueh
-          elif dayhour == 4:
-               tageszeit = frueh
-          elif dayhour == 0:
-               tageszeit = mitternacht
-
      
-     # check and light h
-     lighthour = get_light_hour(dayhour)
-     lightminute = get_light_minute(dayminute)
-     
+     # perform script only when time (minute) has changed
      if dayminute != olddayminute:
+          # check and light h
+          lighthour = get_light_hour(dayhour)
+          lightminute = get_light_minute(dayminute)
+          
+          # get timerange of the day
+          if dayhour > 12:
+               dayhour = dayhour-12
+               tageszeit = mittags
+               if dayhour > 5:
+                    tageszeit = abends
+               elif dayhour > 9:
+                    tageszeit = nachts
+          
+          else:
+               tageszeit = morgens
+               if dayhour == 1:
+                    tageszeit = nachts
+               elif dayhour == 2:
+                    tageszeit = frueh
+               elif dayhour == 3:
+                    tageszeit = frueh
+               elif dayhour == 4:
+                    tageszeit = frueh
+               elif dayhour == 0:
+                    tageszeit = mitternacht
+               
           # check brightness
           reload( brightness )
           from brightness import *
-          pixels.fill((0,0,0))
+          # adjust brightness/color levels when wrong values input
           if l > 1:
                l = 1
+          if r > 255:
+               r = 255
+          elif r < 0:
+               r = 0
+          if g > 255:
+               g = 255
+          elif g < 0:
+               g = 0
+          if b > 255:
+               b = 255
+          elif b < 0:
+               b = 0
+          # Reset all LEDs to off
+          pixels.fill((0,0,0))
+          
      
           for i in es+ist+lighthour+uhr+und_2+lightminute+tageszeit:
-               pixels[i]=(int(l*x),int(l*y),int(l*z))
+               pixels[i]=(int(l*r),int(l*g),int(l*b))
                
           time.sleep(55)
      
-     # store old minute
+     # store old minute for beginning of the loop
           olddayminute=dayminute
-          del x
-          del y
-          del z
           print("Script running")
-
-
-    
-        
-
-
-
-
