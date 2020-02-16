@@ -1,6 +1,7 @@
 import board
 import neopixel
 import datetime
+import time
 from importlib import reload
 import brightness
 from brightness import *
@@ -300,6 +301,8 @@ while True:
      
           for i in es+ist+lighthour+uhr+und_2+lightminute+tageszeit:
                pixels[i]=(int(l*x),int(l*y),int(l*z))
+               
+          time.sleep(55)
      
      # store old minute
           olddayminute=dayminute
