@@ -16,6 +16,7 @@ oncount=0
 
 # Hourfunction
 def get_light_hour(hour):
+     print(hour)
      if hour == 1:
           lighthour=eins_1
      elif hour == 2:
