@@ -295,9 +295,11 @@ while True:
           reload( brightness )
           from brightness import *
           pixels.fill((0,0,0))
+          if l > 1:
+               l = 1
      
           for i in es+ist+lighthour+uhr+und_2+lightminute+tageszeit:
-               pixels[i]=(x,y,z)
+               pixels[i]=(int(l*x),int(l*y),int(l*z))
      
      # store old minute
           olddayminute=dayminute
