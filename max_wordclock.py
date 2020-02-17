@@ -261,7 +261,7 @@ nachts=(264,265,266,267,268,269)
 # Zeile 16
 morgens=(287,286,285,284,283,282,281)
 warm=(280,279,278,277)
-mittags=(276,275,274.273,272,271,270)
+mittags=(276,275,274,273,272,271,270)
 
 # Start actual infinite while loop to run script
 while True:
