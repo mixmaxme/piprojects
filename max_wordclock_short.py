@@ -101,30 +101,6 @@ def get_light_minute(minute):
      lightminute=mindict[minute]
      return lightminute
 
-# Update function
-def update_leds(lighttime):
-     # check brightness
-     reload( brightness )
-     from brightness import *
-     # adjust brightness/color levels when wrong values input
-     if l > 1:
-          l = 1
-     if r > 255:
-          r = 255
-     elif r < 0:
-          r = 0
-     if g > 255:
-          g = 255
-     elif g < 0:
-          g = 0
-     if b > 255:
-          b = 255
-     elif b < 0:
-          b = 0
-     
-     for i in es+ist+lighthour+uhr+und_2+lightminute+tageszeit:
-          pixels[i]=(int(l*r),int(l*g),int(l*b))
-
 # define all occurring words of 24h wordclock (take care - alternating LED numbering)
 # Zeile 1
 es=(0,1)
