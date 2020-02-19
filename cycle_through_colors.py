@@ -13,14 +13,61 @@ pixels.fill((0,0,0))
 
 # Start actual infinite while loop to run script
 while True:
-          r0 = int(100*random())
-          g0 = int(100*random())
-          b0 = int(100*random())
-          # Loop thorugh RGB (only to 100)
-          for  r in range(r0,100,10):
-                    for g in range(g0,100,10):
-                              for b in range(b0,100,10):
-                                        print(r,g,b)
-                                        pixels.fill((r,g,b))
-                                        time.sleep(0.0001)
+          # Startwerte
+          r = (120)
+          g = (0)
+          b = (0)          
+          
+          # rot
+          r1 = (120)
+          g1 = (0)
+          b1 = (0)
+          
+          # gelb
+          r2 = (120)
+          g2 = (120)
+          b2 = (0)
+          
+          # grün
+          r3 = (0)
+          g3 = (120)
+          b3 = (0)
+          
+          # kA
+          r4 = (0)
+          g4 = (120)
+          b4 = (120) 
+          
+          # blau
+          r5 = (0)
+          g5 = (0)
+          b5 = (120)          
+                            
+          # lila
+          r6 = (120)
+          g6 = (0)
+          b6 = (120)
+          
+          for g in range(g1,g2)
+                  pixels.fill((r,g,b))
+                  time.sleep(0.0001)  
+          
+           for r in range(r2,r3)
+                  pixels.fill((r,g,b))
+                  time.sleep(0.0001)           
                           
+           for b in range(b3,b4)
+                  pixels.fill((r,g,b))
+                  time.sleep(0.0001)  
+
+           for g in range(g4,g5)
+                  pixels.fill((r,g,b))
+                  time.sleep(0.0001)  
+                    
+           for r in range(r5,r6)
+                  pixels.fill((r,g,b))
+                  time.sleep(0.0001)         
+ 
+           for b in range(b6,b1)
+                  pixels.fill((r,g,b))
+                  time.sleep(0.0001)               
