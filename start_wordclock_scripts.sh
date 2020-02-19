@@ -14,7 +14,7 @@ while getopts ":wpf" options; do              # Loop: Get the next option;
       ;;
     p)                                         # If the option is p
       echo "Starting Colorcycle"
-      sudo python cycle_through_colors.py $2
+      sudo python cycle_through_colors.py 5
       ;;
     f)                                         # If the option is f
       echo "Fill wordclock with current color"
