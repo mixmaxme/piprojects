@@ -7,7 +7,7 @@ import sys                         # to get velocity imported
 pixels = neopixel.NeoPixel(board.D18, 288)
 pixels.fill((0,0,0))
 v=int(sys.argv[1])
-print(v)
+
 print("Script started running...")
 
 # Start actual infinite while loop to run script
