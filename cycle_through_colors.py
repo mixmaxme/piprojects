@@ -11,6 +11,7 @@ from brightness import *           # to load/reload variables from file
 pixels = neopixel.NeoPixel(board.D18, 288)
 pixels.fill((0,0,0))
 v=10
+print("Script started running...")
 
 # Start actual infinite while loop to run script
 while True:
