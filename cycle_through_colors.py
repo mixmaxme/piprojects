@@ -6,7 +6,7 @@ import sys                         # to get velocity imported
 # initialize system
 pixels = neopixel.NeoPixel(board.D18, 288)
 pixels.fill((0,0,0))
-v=sys.argv[1]
+v=int(sys.argv[1])
 print(v)
 print("Script started running...")
 
