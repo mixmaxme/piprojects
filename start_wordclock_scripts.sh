@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Killing active sudo python processes"
-pkill -f "sudo python"
+sudo pkill -f "sudo python"
 
 echo "Getting options - prepared for use of multiple options"
 while getopts ":wpf" options; do              # Loop: Get the next option;
