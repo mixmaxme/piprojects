@@ -27,13 +27,6 @@ while getopts ":n:t:" options; do              # Loop: Get the next option;
       ;;
     f)                                         # If the option is f
       sudo python fill_wordclock.py
-    :)                                         # If expected argument omitted:
-      echo "Error: -${OPTARG} requires an argument."
-      exit_abnormal                            # Exit abnormally.
-      ;;
-    *)                                         # If unknown (any other) option:
-      exit_abnormal                            # Exit abnormally.
-      ;;
   esac
 done
 
