@@ -16,6 +16,7 @@ while True:
          for  r in range(100):
               for g in range(100):
                     for b in range(100):
+                          print(r,g,b)
                           pixels.fill((r,g,b))
                           time.sleep(0.05)
                           
