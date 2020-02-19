@@ -51,20 +51,26 @@ while True:
           
           print('start with red')
           for g in range(g1,g2,v):
-                  pixels.fill((r,g,b))
+                    pixels.fill((r,g,b))
+                    time.sleep(0.05)
           print('yellow arrived')
           for r in range(r2,r3,-v):
-                  pixels.fill((r,g,b))         
+                    pixels.fill((r,g,b))  
+                    time.sleep(0.05)
           print('green arrived')                
           for b in range(b3,b4,v):
-                  pixels.fill((r,g,b))
+                    pixels.fill((r,g,b))
+                    time.sleep(0.05)
           print('cyan arrived')
           for g in range(g4,g5,-v):
-                  pixels.fill((r,g,b))
+                    pixels.fill((r,g,b))
+                    time.sleep(0.05)
           print('blue arrived')          
           for r in range(r5,r6,v):
-                  pixels.fill((r,g,b))      
+                    pixels.fill((r,g,b))  
+                    time.sleep(0.05)
           print('purple arrived')
           for b in range(b6,b1,-v):
-                  pixels.fill((r,g,b))  
+                    pixels.fill((r,g,b))  
+                    time.sleep(0.05)
           print('red arrived')
