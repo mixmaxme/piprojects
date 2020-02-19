@@ -48,26 +48,26 @@ while True:
           g6 = (0)
           b6 = (120)
           
-          for g in range(g1,g2,1)
+          for g in range(g1,g2,1):
                   pixels.fill((r,g,b))
                   time.sleep(0.0001)  
           
-           for r in range(r2,r3,-1)
+           for r in range(r2,r3,-1):
                   pixels.fill((r,g,b))
                   time.sleep(0.0001)           
                           
-           for b in range(b3,b4,1)
+           for b in range(b3,b4,1):
                   pixels.fill((r,g,b))
                   time.sleep(0.0001)  
 
-           for g in range(g4,g5-1)
+           for g in range(g4,g5,-1):
                   pixels.fill((r,g,b))
                   time.sleep(0.0001)  
                     
-           for r in range(r5,r6,1)
+           for r in range(r5,r6,1):
                   pixels.fill((r,g,b))
                   time.sleep(0.0001)         
  
-           for b in range(b6,b1,-1)
+           for b in range(b6,b1,-1):
                   pixels.fill((r,g,b))
                   time.sleep(0.0001)               
