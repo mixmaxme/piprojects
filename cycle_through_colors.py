@@ -13,39 +13,39 @@ print("Script started running...")
 # Start actual infinite while loop to run script
 while True:
           # Startwerte
-          r = (120)
+          r = (100)
           g = (0)
           b = (0)          
           
           # rot
-          r1 = (120)
+          r1 = (100)
           g1 = (0)
           b1 = (0)
           
           # gelb
-          r2 = (120)
-          g2 = (120)
+          r2 = (100)
+          g2 = (100)
           b2 = (0)
           
           # grün
           r3 = (0)
-          g3 = (120)
+          g3 = (100)
           b3 = (0)
           
           # kA
           r4 = (0)
-          g4 = (120)
-          b4 = (120) 
+          g4 = (100)
+          b4 = (100) 
           
           # blau
           r5 = (0)
           g5 = (0)
-          b5 = (120)          
+          b5 = (100)          
                             
           # lila
-          r6 = (120)
+          r6 = (100)
           g6 = (0)
-          b6 = (120)
+          b6 = (100)
           
           print('start with red')
           for g in range(g1,g2,v):
