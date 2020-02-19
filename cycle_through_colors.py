@@ -1,16 +1,13 @@
 import board
 import neopixel                    # to control LEDs
-import datetime                    # for datetime management
 import time                        # for sleep/timing commands
-from random import random
-from importlib import reload
-import brightness
-from brightness import *           # to load/reload variables from file
+import sys                         # to get velocity imported
 
 # initialize system
 pixels = neopixel.NeoPixel(board.D18, 288)
 pixels.fill((0,0,0))
-v=10
+v=sys.arg
+print(v)
 print("Script started running...")
 
 # Start actual infinite while loop to run script
