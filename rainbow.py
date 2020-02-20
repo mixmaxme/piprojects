@@ -13,6 +13,7 @@ s=int(nol/6)
 # initialize system
 pixels = neopixel.NeoPixel(board.D18, nol, auto_write=False)
 pixels.fill((0,0,0))
+pixels.show()
 
 # Build colorcycle
 l = numpy.linspace(0, numpy.pi, s)
