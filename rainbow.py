@@ -41,7 +41,6 @@ print("Script started running...")
 
 # Start actual infinite while loop to run script
 while True:
-      print(r)
       for i in range(nol):
             pixels[i]=(r[i],g[i],b[i])   
       
@@ -49,7 +48,4 @@ while True:
       r.rotate(1)
       g.rotate(1)
       b.rotate(1)
-      #r = [r[-1]] + r[:-1]  
-      #g = [g[-1]] + g[:-1]  
-      #b = [b[-1]] + b[:-1]  
       time.sleep(0.05)
