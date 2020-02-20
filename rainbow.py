@@ -11,7 +11,7 @@ nol=288
 s=int(nol/6)
 
 # initialize system
-pixels = neopixel.NeoPixel(board.D18, nol)
+pixels = neopixel.NeoPixel(board.D18, nol, auto_write=false)
 pixels.fill((0,0,0))
 
 # Build colorcycle
@@ -36,4 +36,6 @@ print("Script started running...")
 # Start actual infinite while loop to run script
 while True:
       for i in range(nol):
-            pixels[i]=(r(i),g(i),b(i)
+            pixels[i]=(r(i),g(i),b(i))
+     
+      pixels.show()
