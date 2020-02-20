@@ -4,6 +4,7 @@ import neopixel                    # to control LEDs
 import time                        # for sleep/timing commands
 from brightness import *           # to load/reload variables from file
 import numpy                       # for the cosinus / linspace functions
+from collections import deque
 
 ## Initialize Variables
 nol=288
@@ -32,6 +33,10 @@ r = r.astype(int)
 g = g.astype(int)
 b = b.astype(int)
 
+r = deque(r)
+g = deque(g)
+b = deque(b)
+
 print("Script started running...")
 
 # Start actual infinite while loop to run script
@@ -41,7 +46,10 @@ while True:
             pixels[i]=(r[i],g[i],b[i])   
       
       pixels.show()
-      r = [r[-1]] + r[:-1]  
-      g = [g[-1]] + g[:-1]  
-      b = [b[-1]] + b[:-1]  
+      r.rotate(1)
+      g.rotate(1)
+      b.rotate(1)
+      #r = [r[-1]] + r[:-1]  
+      #g = [g[-1]] + g[:-1]  
+      #b = [b[-1]] + b[:-1]  
       time.sleep(0.05)
