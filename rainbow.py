@@ -11,7 +11,7 @@ nol=288
 s=int(nol/6)
 
 # initialize system
-pixels = neopixel.NeoPixel(board.D18, nol, auto_write=false)
+pixels = neopixel.NeoPixel(board.D18, nol, auto_write=False)
 pixels.fill((0,0,0))
 
 # Build colorcycle
