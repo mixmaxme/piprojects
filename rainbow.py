@@ -37,6 +37,7 @@ print("Script started running...")
 # Start actual infinite while loop to run script
 while True:
       for i in range(nol):
+            print(i)
             pixels[i]=(r[i],g[i],b[i])   
       print("Bin dabei")
       pixels.show()
