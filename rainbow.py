@@ -37,7 +37,7 @@ print("Script started running...")
 while True:
       for i in range(nol):
             pixels[i]=(r[i],g[i],b[i])   
-      
+      print("Bin dabei")
       pixels.show()
       r = [r[-1]] + r[:-1]  
       g = [g[-1]] + g[:-1]  
