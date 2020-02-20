@@ -22,7 +22,7 @@ while getopts ":wpfr" options; do              # Loop: Get the next option;
       ;;
     r)
       echo "Fill wordclock with a rainbow!"
-      sudpo python rainbow.py
+      sudo python rainbow.py
       ;;
     \? )
       echo "Usage: ./start_wordclock_scripts.sh [-w/p/f]"
