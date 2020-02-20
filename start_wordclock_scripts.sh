@@ -10,19 +10,19 @@ while getopts ":wpfr" options; do              # Loop: Get the next option;
   case "${options}" in                         # 
     w)                                         # If the option is w
       echo "Starting Wordclock"
-      sudo python max_wordclock_short.py
+      sudo python /home/pi/piprojects/max_wordclock_short.py
       ;;
     p)                                         # If the option is p
       echo "Starting Colorcycle"
-      sudo python cycle_through_colors.py 5
+      sudo python /home/pi/piprojects/cycle_through_colors.py 5
       ;;
     f)                                         # If the option is f
       echo "Fill wordclock with current color"
-      sudo python fill_wordclock.py
+      sudo python /home/pi/piprojects/fill_wordclock.py
       ;;
     r)
       echo "Fill wordclock with a rainbow!"
-      sudo python rainbow.py
+      sudo python /home/pi/piprojects/rainbow.py
       ;;
     \? )
       echo "Usage: ./start_wordclock_scripts.sh [-w/p/f]"
