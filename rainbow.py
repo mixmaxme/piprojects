@@ -36,6 +36,6 @@ print("Script started running...")
 # Start actual infinite while loop to run script
 while True:
       for i in range(nol):
-            pixels[i]=(r(i),g(i),b(i))
+            pixels[i]=(r[i],g[i],b[i])
      
       pixels.show()
