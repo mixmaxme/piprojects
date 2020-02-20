@@ -17,7 +17,7 @@ while True:
           from brightness import *
           # adjust brightness/color levels when wrong values input
           
-          r = int((r/255)*a)
+          r = int*(r/255)*a)
           g = int*(g/255)*a)
           b = int*(b/255)*a)
 #          if l > 1:
