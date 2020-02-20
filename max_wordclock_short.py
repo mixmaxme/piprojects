@@ -7,7 +7,7 @@ import brightness
 from brightness import *           # to load/reload variables from file
 
 # initialize system
-pixels = neopixel.NeoPixel(board.D18, 288)
+pixels = neopixel.NeoPixel(board.D18, 288, auto_write=False)
 pixels.fill((0,0,0))
 olddayminute=0
 oncount=0
@@ -252,10 +252,10 @@ while True:
           pixels.fill((0,0,0))
           
      
-          #for i in lighttime:
-          #     pixels[i]=(int(l*r),int(l*g),int(l*b))
-          pixels[lighttime]=(int(l*r),int(l*g),int(l*b))
-          
+          for i in lighttime:
+               pixels[i]=(int(l*r),int(l*g),int(l*b))
+          pixels.show()
+                 
           # Counter to keep the times accourate before slowing down the program
           if oncount > 120:
                time.sleep(55)
