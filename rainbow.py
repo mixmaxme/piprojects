@@ -7,9 +7,10 @@ import numpy                       # for the cosinus / linspace functions
 from collections import deque
 
 ## Initialize Variables
-nol=288
+nol = 288
 # get slowness
-s=int(nol/6)
+s = int(nol/6)
+v = int(v*10)
 
 # initialize system
 pixels = neopixel.NeoPixel(board.D18, nol, auto_write=False)
@@ -45,7 +46,7 @@ while True:
             pixels[i]=(r[i],g[i],b[i])   
       
       pixels.show()
-      r.rotate(1)
-      g.rotate(1)
-      b.rotate(1)
+      r.rotate(v)
+      g.rotate(v)
+      b.rotate(v)
       time.sleep(0.03)
