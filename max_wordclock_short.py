@@ -252,8 +252,9 @@ while True:
           pixels.fill((0,0,0))
           
      
-          for i in lighttime:
-               pixels[i]=(int(l*r),int(l*g),int(l*b))
+          #for i in lighttime:
+          #     pixels[i]=(int(l*r),int(l*g),int(l*b))
+          pixels[lighttime]=(int(l*r),int(l*g),int(l*b))
           
           # Counter to keep the times accourate before slowing down the program
           if oncount > 120:
