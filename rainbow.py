@@ -48,4 +48,4 @@ while True:
       r.rotate(1)
       g.rotate(1)
       b.rotate(1)
-      time.sleep(0.05)
+      time.sleep(0.03)
