@@ -4,17 +4,19 @@ import time                        # for sleep/timing commands
 from brightness import *           # to load/reload variables from file
 import numpy                       # for the cosinus / linspace functions
 
+s=int(1/v)
+
 # initialize system
 pixels = neopixel.NeoPixel(board.D18, 288)
 pixels.fill((0,0,0))
 
 # Build colorcycle
-l = numpy.linspace(0, numpy.pi, int(1/v))
+l = numpy.linspace(0, numpy.pi, s)
 # define four areas:
 cosup = (-0.5) * a * (numpy.cos(l) - 1)
-flattop = numpy.linspace(a, a, v)
+flattop = numpy.linspace(a, a, s)
 cosdown = 0.5 * a * (numpy.cos(l) + 1)
-flatbottom = numpy.linspace(0, 0, int(1/v))
+flatbottom = numpy.linspace(0, 0, s)
 
 r = numpy.concatenate([flattop, cosdown, flatbottom, flatbottom, cosup, flattop])
 g = numpy.concatenate([cosup, flattop, flattop, cosdown, flatbottom, flatbottom])
@@ -29,7 +31,7 @@ print("Script started running...")
 
 # Start actual infinite while loop to run script
 while True:
-          for i in range(6*(int(1/v)):
+          for i in range(6*s):
                     pixels.fill((r[i],g[i],b[i]))
                     time.sleep(0.04)
  
