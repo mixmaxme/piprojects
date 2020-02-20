@@ -17,23 +17,9 @@ while True:
           from brightness import *
           # adjust brightness/color levels when wrong values input
           
-          r = int*(r/255)*a)
-          g = int*(g/255)*a)
-          b = int*(b/255)*a)
-#          if l > 1:
-#               l = 1
-#          if r > 100:
-#               r = 100
-#          elif r < 0:
-#               r = 0
-#          if g > 100:
-#               g = 100
-#          elif g < 0:
-#               g = 0
-#          if b > 100:
-#               b = 100
-#          elif b < 0:
-#               b = 0
+          r = int*((r/255)*a)
+          g = int*((g/255)*a)
+          b = int*((b/255)*a)
                
           # Fill all LEDs
           pixels.fill((r,g,b))
