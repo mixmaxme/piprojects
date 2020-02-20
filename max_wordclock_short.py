@@ -9,6 +9,7 @@ from brightness import *           # to load/reload variables from file
 # initialize system
 pixels = neopixel.NeoPixel(board.D18, 288, auto_write=False)
 pixels.fill((0,0,0))
+pixels.show()
 olddayminute=0
 oncount=0
 
