@@ -4,8 +4,8 @@ import time                        # for sleep/timing commands
 from brightness import *           # to load/reload variables from file
 import numpy                       # for the cosinus / linspace functions
 
+# get slowness
 s=int(1/v)
-print(s)
 
 # initialize system
 pixels = neopixel.NeoPixel(board.D18, 288)
