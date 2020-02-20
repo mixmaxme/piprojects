@@ -16,9 +16,9 @@ flattop = numpy.linspace(a, a, v)
 cosdown = 0.5 * a * (numpy.cos(l) + 1)
 flatbottom = numpy.linspace(0, 0, v)
 
-r = numpy.concatenate([flattop, cosdown, flatbottom, cosup])
-g = numpy.concatenate([cosup, flattop, cosdown, flatbottom])
-b = numpy.concatenate([flatbottom, cosup, flattop, cosdown])
+r = numpy.concatenate([flattop, cosdown, flatbottom, flatbottom, cosup, flattop])
+g = numpy.concatenate([cosup, flattop, flattop, cosdown, flatbottom, flatbottom])
+b = numpy.concatenate([flatbottom, flatbottom, cosup, flattop, flattop, cosdown])
 
 # make intarray out of floatarray
 r = r.astype(int)
