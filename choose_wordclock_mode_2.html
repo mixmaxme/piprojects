@@ -1,0 +1,16 @@
+<div class="container">
+  <!--Color picking widget-->
+  <div class="control-panel col-sm-3">
+    <h1><span class="red">R</span><span class="green">G</span><span class="blue">B</span> Color Picker</h1>
+    <div class="row color-description">
+      <div class="dot redbg"></div><span id="redtext"></span>
+      <div class="dot greenbg"></div><span id="greentext"></span>
+      <div class="dot bluebg"></div><span id="bluetext"></span>
+    </div>
+    <input class="control" id="red" type="range" min="0" max="255" value="155"/>
+    <input class="control" id="green" type="range" min="0" max="255" value="205"/>
+    <input class="control" id="blue" type="range" min="0" max="255" value="80"/>
+  </div>
+  <!--Color picked showcase-->
+  <div class="color-panel col-sm-9" id="color-panel"></div>
+</div>
