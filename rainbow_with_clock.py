@@ -13,6 +13,9 @@ nol = 288
 # get slowness
 s = int(nol/6)
 v = int(v*50)
+r = rold
+g = gold
+b = bold
 
 # initialize system
 pixels = neopixel.NeoPixel(board.D18, nol, auto_write=False)
@@ -262,7 +265,7 @@ while True:
      for i in range(nol):
             pixels[i]=(r[i],g[i],b[i])   
      for i in lighttime:
-            pixels[i]=(int(l*r),int(l*g),int(l*b))
+            pixels[i]=(rold,gold,bold)
       
      pixels.show()
      r.rotate(v)
