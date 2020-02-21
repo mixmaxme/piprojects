@@ -265,4 +265,4 @@ while True:
      
      # store old minute for beginning of the loop
           olddayminute=dayminute
-          print("Script running")
+          #print("Script running")
