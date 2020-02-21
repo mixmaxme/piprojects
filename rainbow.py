@@ -54,4 +54,4 @@ while True:
       time.sleep(0.03)
       reload( brightness )
       from brightness import v
-      
+      v = int(v*50)
