@@ -4,10 +4,14 @@ echo "Killing active sudo python processes"
 sudo pkill -f "sudo python"
 
 echo "Getting options - prepared for use of multiple options"
-while getopts ":wpfr" options; do              # Loop: Get the next option;
+while getopts ":awpfr" options; do              # Loop: Get the next option;
                                                # use silent error checking;
                                                # options n and t take arguments.
   case "${options}" in                         # 
+    a)
+      echo "Starting Wordclock + Rainbow"
+      sudo python /home/pi/piprojects/rainbow_with_clock.py
+      ;;
     w)                                         # If the option is w
       echo "Starting Wordclock"
       sudo python /home/pi/piprojects/max_wordclock_short.py
