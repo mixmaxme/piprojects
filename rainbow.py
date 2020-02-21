@@ -3,6 +3,7 @@ import board
 import neopixel                    # to control LEDs
 import time                        # for sleep/timing commands
 from importlib import reload
+import brightness
 from brightness import *           # to load/reload variables from file
 import numpy                       # for the cosinus / linspace functions
 from collections import deque
