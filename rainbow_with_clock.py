@@ -13,9 +13,9 @@ nol = 288
 # get slowness
 s = int(nol/6)
 v = int(v*50)
-r = rold
-g = gold
-b = bold
+rold = r
+gold = g
+bold = b
 
 # initialize system
 pixels = neopixel.NeoPixel(board.D18, nol, auto_write=False)
