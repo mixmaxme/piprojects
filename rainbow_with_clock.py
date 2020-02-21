@@ -233,6 +233,7 @@ while True:
      daynow = datetime.datetime.now()
      dayhour = daynow.hour
      dayminute = daynow.minute
+     print(dayminute)
      
      # get timerange of the day
      if dayhour > 12:
