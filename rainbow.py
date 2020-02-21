@@ -2,6 +2,7 @@
 import board
 import neopixel                    # to control LEDs
 import time                        # for sleep/timing commands
+from importlib import reload
 from brightness import *           # to load/reload variables from file
 import numpy                       # for the cosinus / linspace functions
 from collections import deque
@@ -50,3 +51,6 @@ while True:
       g.rotate(v)
       b.rotate(v)
       time.sleep(0.03)
+      reload( brightness )
+      from brightness import v
+      
