@@ -253,21 +253,21 @@ while True:
                     tageszeit = mitternacht
                     
           # check and light h
-      lighthour = get_light_hour(dayhour)
-      lightminute = get_light_minute(dayminute)
-      lighttime = es+ist+lighthour+uhr+und_2+lightminute+tageszeit
+     lighthour = get_light_hour(dayhour)
+     lightminute = get_light_minute(dayminute)
+     lighttime = es+ist+lighthour+uhr+und_2+lightminute+tageszeit
 
 # Fill up pixels
-      for i in range(nol):
+     for i in range(nol):
             pixels[i]=(r[i],g[i],b[i])   
-      for i in lighttime:
-               pixels[i]=(int(l*r),int(l*g),int(l*b))
+     for i in lighttime:
+            pixels[i]=(int(l*r),int(l*g),int(l*b))
       
-      pixels.show()
-      r.rotate(v)
-      g.rotate(v)
-      b.rotate(v)
-      time.sleep(0.03)
-      reload( brightness )
-      from brightness import v
-      v = int(v*50)
+     pixels.show()
+     r.rotate(v)
+     g.rotate(v)
+     b.rotate(v)
+     time.sleep(0.03)
+     reload( brightness )
+     from brightness import v
+     v = int(v*50)
