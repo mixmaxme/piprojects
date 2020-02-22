@@ -49,7 +49,7 @@ b = deque(b)
 def get_light_hour(hour):
      hourdict = {
           0: null_1,
-          1: eins_1,
+          1: ein_1,
           2: zwei_1,
           3: drei_1,
           4: vier_1,
