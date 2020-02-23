@@ -240,5 +240,17 @@ slider.oninput = function() {
 </script>
 
   
+HERE;
+ //generate output for text file
+ $output = <<< HERE
+r =  $r_value
+HERE;
+ //open file for output
+ $fp = fopen("contacts.txt", "a");
+ //write to the file
+ fwrite($fp, $output);
+ fclose($fp);
+ ?>
+  
 </body>
 </html>
