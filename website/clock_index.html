@@ -178,14 +178,14 @@
 <div class="slidecontainer">
   <p>Red value: <span id="r_value"></span></p>
   <input type="range" min="1" max="255" value="100" class="slider_red" id="color_r">
-  <p>Green value:</p>
+  <p>Green value: <span id="g_value"></span></p>
   <input type="range" min="1" max="255" value="100" class="slider_green" id="color_g">
-  <p>Blue value:</p>
+  <p>Blue value: <span id="b_value"></span></p>
   <input type="range" min="1" max="255" value="100" class="slider_blue" id="color_b">
-  <p>Brightness:</p>
+  <p>Brightness: <span id="bright"></span></p>
   <input type="range" min="0" max="100" value="50" class="slider_bright" id="brightness">
-  <p>Velocity:</p>
-  <input type="range" min="0" max="1" value="0.01" class="slider" id="velocity">
+  <p>Velocity: <span id="v_value"></span></p>
+  <input type="range" min="0" max="100" value="1" class="slider" id="velocity">
 </div>
 
 <input type="submit" value="Change current settings">
@@ -207,12 +207,35 @@ var output_red = document.getElementById("r_value");
 output_red.innerHTML = slider_red.value;
 
 var slider_green = document.getElementById("color_g");
-var output = document.getElementById("g_value");
+var output_green = document.getElementById("g_value");
 output_green.innerHTML = slider_green.value;  
   
+var slider_blue = document.getElementById("color_b");
+var output_blue = document.getElementById("b_value");
+output_blue.innerHTML = slider_blue.value;  
+  
+var slider_bright = document.getElementById("brightness");
+var output_bright = document.getElementById("bright_value");
+output_bright.innerHTML = slider_bright.value;  
+  
+var slider = document.getElementById("velocity");
+var output = document.getElementById("v_value");
+output.innerHTML = slider.value;
   
 slider_red.oninput = function() {
   output_red.innerHTML = this.value;
+}
+slider_green.oninput = function() {
+  output_green.innerHTML = this.value;
+}
+slider_blue.oninput = function() {
+  output_blue.innerHTML = this.value;
+}
+slider_bright.oninput = function() {
+  output_bright.innerHTML = this.value;
+}
+slider.oninput = function() {
+  output.innerHTML = this.value;
 }
 </script>
 
