@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div class="slidecontainer">
+  <input type="range" min="1" max="255" value="50" class="slider" id="color_r">
+</div>
+
+<div class="slidecontainer">
+  <input type="range" min="1" max="255" value="50" class="slider" id="color_g">
+</div>
+
+<div class="slidecontainer">
+  <input type="range" min="1" max="255" value="50" class="slider" id="color_b">
+</div>
+
+<div class="slidecontainer">
+  <input type="range" min="0" max="1" value="0.1" class="slider" id="velocity">
+</div>
+
+<div class="slidecontainer">
+  <input type="range" min="1" max="100" value="50" class="slider" id="brightness">
+</div>
+
+
+
+<label for="fname">First name:</label>
+<input type="text" id="fname" name="fname">
+
+<input type="submit" value="Change current settings">
+
+<p>Click on the Button to start the connected WC-function</p>
+<button onclick="start_wordclock()">Wordclock</button>
+<button onclick="start_wordclock_rainbow()">Wordclock (rainbow)</button>
+<button onclick="start_rainbow()">Rainbow</button>
+<button onclick="start_pulse()">Color Change/button>
+<button onclick="start_fill()">Fill with chosen Color</button>
+
+</body>
+</html>
