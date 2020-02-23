@@ -188,8 +188,10 @@
   <input type="range" min="0" max="100" value="1" class="slider" id="velocity">
 </div>
 
-<input type="submit" value="Change current settings">
-
+<form action="update_textfile.php" method="get">
+  <input type="submit" value="Change current settings">
+</form>  
+  
 <p>Click on the Button to start the connected WC-function</p>
    <p><button onclick="start_wordclock()">Wordclock</button></p>
   
