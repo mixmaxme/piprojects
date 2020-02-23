@@ -176,7 +176,7 @@
 <h1>Change Wordclock Settings</h1>  
   
 <div class="slidecontainer">
-  <p>Red value:</p>
+  <p>Red value: <span id="red_values"></span></p>
   <input type="range" min="1" max="255" value="100" class="slider_red" id="color_r">
   <p>Green value:</p>
   <input type="range" min="1" max="255" value="100" class="slider_green" id="color_g">
@@ -200,6 +200,22 @@
 <p><button onclick="start_pulse()">Color Change</button></p>
   
 <p><button onclick="start_fill()">Fill with chosen Color</button></p>
+
+<script>
+var slider_red = document.getElementById("color_r");
+var output = document.getElementById("r_value");
+output_red.innerHTML = slider_red.value;
+
+var slider_green = document.getElementById("color_g");
+var output = document.getElementById("g_value");
+output_green.innerHTML = slider_green.value;  
+  
+  
+slider_red.oninput = function() {
+  output_red.innerHTML = this.value;
+}
+</script>
+
   
 </body>
 </html>
