@@ -1,5 +1,6 @@
 #!/usr/bin/env python
-import cgi
+import cgi, cgitb
+
 form = cgi.FieldStorage()
 searchterm1 = form.getvalue('r-wert')
 searchterm2 = form.getvalue('g-wert')
