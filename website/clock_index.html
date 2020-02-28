@@ -108,7 +108,7 @@
   -webkit-appearance: none;
   width: 100%;
   height: 25px;
-  background: rgb(<span id="r_value"></span>, <span id="b_value"></span>, <span id="b_value"></span>);
+  background: #d3d3d3;
   outline: none;
   opacity: 0.7;
   -webkit-transition: .2s;
@@ -183,6 +183,8 @@
   <input type="range" min="1" max="255" value="100" class="slider_green" id="color_g">
   <p>Blue value: <span id="b_value"></span></p>
   <input type="range" min="1" max="255" value="100" class="slider_blue" id="color_b">
+</div>
+<div id="test",class="slidecontainer">  
   <p>Brightness: <span id="bright_value"></span></p>
   <input type="range" min="0" max="100" value="50" class="slider_bright" id="brightness">
   <p>Velocity: <span id="v_value"></span></p>
@@ -240,6 +242,8 @@ slider_bright.oninput = function() {
 slider.oninput = function() {
   output.innerHTML = this.value;
 }
+  
+document.getElementByxId('test').style.background = rgb (slider_red.value, slider_green.value, slider_blue.value)
 </script>
   
 </body>
