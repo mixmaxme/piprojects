@@ -2,6 +2,10 @@
 
 echo "Killing active sudo python processes"
 echo "" | sudo -S pkill -f "sudo python"
+pkill -f "max_wordclock"
+pkill -f "rainbow"
+pkill -f "cycle_through"
+pkill -f "fill_wordclock"
 
 echo "Getting options - prepared for use of multiple options"
 while getopts ":awpfr" options; do              # Loop: Get the next option;
