@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Killing active sudo python processes"
-sudo pkill -f "sudo python"
+echo "" | sudo -S pkill -f "sudo python"
 
 echo "Getting options - prepared for use of multiple options"
 while getopts ":awpfr" options; do              # Loop: Get the next option;
