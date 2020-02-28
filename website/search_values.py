@@ -7,7 +7,7 @@ searchterm2 = form.getvalue('g-wert')
 searchterm3 = form.getvalue('b-wert')
 
 f = open("/var/www/html/valueoutput.txt", "w+")
-f.write(searchterm1)
+f.write(str.searchterm1)
 f.close()
 
 print("Content-type:text/html\r\n\r\n")
