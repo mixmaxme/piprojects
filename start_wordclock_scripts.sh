@@ -11,7 +11,7 @@ pkill -f "cycle_through"
 pkill -f "fill_wordclock"
 
 echo "Getting options - prepared for use of multiple options"
-while getopts ":awpfr" options; do              # Loop: Get the next option;
+while getopts ":awpfrc" options; do              # Loop: Get the next option;
                                                # use silent error checking;
                                                # options n and t take arguments.
   case "${options}" in                         # 
@@ -34,6 +34,10 @@ while getopts ":awpfr" options; do              # Loop: Get the next option;
     r)
       echo "Fill wordclock with a rainbow!"
       sudo python /home/pi/piprojects/clock_functions/rainbow.py
+      ;;
+    c)
+      echo "Kill all running processes"
+      sudo pkill -f python
       ;;
     \? )
       echo "Usage: ./start_wordclock_scripts.sh [-w/p/f]"
