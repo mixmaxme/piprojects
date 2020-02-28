@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Killing active sudo python processes"
-sudo pkill -f "sudo python"
+echo ""  | sudo -S pkill -f "sudo python"
 
 echo "Getting options - prepared for use of multiple options"
 while getopts ":awpfr" options; do              # Loop: Get the next option;
@@ -10,11 +10,11 @@ while getopts ":awpfr" options; do              # Loop: Get the next option;
   case "${options}" in                         # 
     a)
       echo "Starting Wordclock + Rainbow"
-      sudo python /home/pi/piprojects/clock_functions/rainbow_with_clock.py
+      echo ""  | sudo -S python /home/pi/piprojects/clock_functions/rainbow_with_clock.py
       ;;
     w)                                         # If the option is w
       echo "Starting Wordclock"
-      sudo python /home/pi/piprojects/clock_functions/max_wordclock_short.py
+      echo ""  | sudo -S python /home/pi/piprojects/clock_functions/max_wordclock_short.py
       ;;
     p)                                         # If the option is p
       echo "Starting Colorcycle"
