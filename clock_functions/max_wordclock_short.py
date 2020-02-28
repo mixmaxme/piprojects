@@ -197,7 +197,7 @@ warm=(280,279,278,277)
 mittags=(276,275,274,273,272,271,270)
 
 # Start actual infinite while loop to run script
-while os.path.exists(/home/pi/piprojects/wc_running.info):
+while os.path.exists("/home/pi/piprojects/wc_running.info"):
      # get current time
      daynow = datetime.datetime.now()
      dayhour = daynow.hour
