@@ -5,6 +5,7 @@ import time                        # for sleep/timing commands
 from importlib import reload
 import brightness
 from brightness import *           # to load/reload variables from file
+import os.path                     # to check if file exists
 
 # initialize system
 pixels = neopixel.NeoPixel(board.D18, 288, auto_write=False)
@@ -196,7 +197,7 @@ warm=(280,279,278,277)
 mittags=(276,275,274,273,272,271,270)
 
 # Start actual infinite while loop to run script
-while True:
+while os.path.exists(/home/pi/piprojects/wc_running.info):
      # get current time
      daynow = datetime.datetime.now()
      dayhour = daynow.hour
