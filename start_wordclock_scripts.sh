@@ -1,6 +1,7 @@
 #!/bin/bash
 
 echo "Killing active sudo python processes"
+rm /home/pi/piprojects/wc_running.info
 echo "" | sudo -S pkill -f "sudo python"
 pkill -f "max_wordclock"
 pkill -f "rainbow"
