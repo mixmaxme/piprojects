@@ -167,6 +167,9 @@
   background: #000000;
   cursor: pointer;
 }  
+div {
+    background-color:rgb(<span id="r_value"></span>,<span id="g_value"></span>,<span id="b_value"></span>);
+  }
 </style>
 </head>  
 
@@ -174,7 +177,7 @@
 <body>
 
 <h1>Change Wordclock Settings</h1>  
-  
+
 <div class="slidecontainer">
   <p>Red value: <span id="r_value"></span></p>
   <input type="range" min="1" max="255" value="100" class="slider_red" id="color_r">
