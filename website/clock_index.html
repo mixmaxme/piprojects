@@ -193,6 +193,11 @@ input {
       border-bottom-style: groove;
       background-color: #eee;
       }
+  
+form  { display: table;      }
+p     { display: table-row;  }
+label { display: table-cell; }
+input { display: table-cell; }
   </style>
 </head>  
 
@@ -216,13 +221,13 @@ input {
   <center>
 <form action="cgi_bin/search_values.py" method="post">
   <br><font face="verdana">
-  Red Value: <input type="text" name="r_wert"> <br>
-  Green Value: <input type="text" name="g_wert"> <br>
-  Blue Value: <input type="text" name="b_wert" /> <br>
-  Brightness (wordclock): <input type="text" name="h_wert" /> <br>
-  Brightness (all on): <input type="text" name="a_wert" /> <br>
-  Velocity: <input type="text" name="v_wert" /> <br>
-  <input type="submit" class="btn wordclock" value="Change current settings" /> </font>
+  <p>Red Value: <input type="text" name="r_wert"></p> <br>
+  <p>Green Value: <input type="text" name="g_wert"></p> <br>
+  <p>Blue Value: <input type="text" name="b_wert"> </p> <br>
+  <p>Brightness (wordclock): <input type="text" name="h_wert"> </p> <br>
+  <p>Brightness (all on): <input type="text" name="a_wert"></p> <br>
+  <p>Velocity: <input type="text" name="v_wert"></p><br>
+  <input type="submit" class="btn wordclock" value="Change current settings"> </font>
 </form>  
 
   
