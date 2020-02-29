@@ -283,6 +283,8 @@ while True:
           # bring Light sensor into the game
           l = int(readLight())
           l = l/500
+          if l < 0.01:
+               l = 0.01
           print(l)
                
           # Reset all LEDs to off
