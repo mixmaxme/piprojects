@@ -30,27 +30,27 @@ def get_temperature(temp):
           10: zehn_1,
           11: elf_1,
           12: zwoelf_1
-          13: drei_2+zehn_2+minuten_2,
-          14: vier_2+zehn_2+minuten_2,
-          15: fuenf_2+zehn_2+minuten_2,
-          16: sech_2+zehn_2+minuten_2,
-          17: sieb_2+zehn_2+minuten_2,
-          18: acht_2+zehn_2+minuten_2,
-          19: neun_2+zehn_2+minuten_2,
-          20: zwanzig_2+minuten_2,
-          21: ein_4+und_3+zwanzig_2+minuten_2,
-          22: zwei_2+und_3+zwanzig_2+minuten_2,
-          23: drei_2+und_3+zwanzig_2+minuten_2,
-          24: vier_2+und_3+zwanzig_2+minuten_2,
-          25: fuenf_2+und_3+zwanzig_2+minuten_2,
-          26: sechs_2+und_3+zwanzig_2+minuten_2,
-          27: sieben_2+und_3+zwanzig_2+minuten_2,
-          28: acht_2+und_3+zwanzig_2+minuten_2,
-          29: neun_2+und_3+zwanzig_2+minuten_2,
-          30: dreissig_2+minuten_2,
-          31: ein_4+und_3+dreissig_2+minuten_2,
-          32: zwei_2+und_3+dreissig_2+minuten_2,
-          33: drei_2+und_3+dreissig_2+minuten_2,
+          13: drei_2+zehn_2,
+          14: vier_2+zehn_2,
+          15: fuenf_2+zehn_2,
+          16: sech_2+zehn_2,
+          17: sieb_2+zehn_2,
+          18: acht_2+zehn_2,
+          19: neun_2+zehn_2,
+          20: zwanzig_2,
+          21: ein_4+und_3+zwanzig_2,
+          22: zwei_2+und_3+zwanzig_2,
+          23: drei_2+und_3+zwanzig_2,
+          24: vier_2+und_3+zwanzig_2,
+          25: fuenf_2+und_3+zwanzig_2,
+          26: sechs_2+und_3+zwanzig_2,
+          27: sieben_2+und_3+zwanzig_2,
+          28: acht_2+und_3+zwanzig_2,
+          29: neun_2+und_3+zwanzig_2,
+          30: dreissig_2,
+          31: ein_4+und_3+dreissig_2,
+          32: zwei_2+und_3+dreissig_2,
+          33: drei_2+und_3+dreissig_2,
           34: vier_2+und_3+dreissig_2+minuten_2,
           35: fuenf_2+und_3+dreissig_2+minuten_2,
           36: sechs_2+und_3+dreissig_2+minuten_2,
@@ -172,9 +172,12 @@ while True:
           # check and light h
           temp,p,h = bme280.readBME280All()
           temp = int(temp)
+          print(temp)
+          
           temperature = get_temperature(temp)
           
           temperature = temperature+es+ist+grad+warm
+          print(temperature)
           
           # check brightness
           reload( brightness )
