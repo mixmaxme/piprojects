@@ -11,7 +11,7 @@ pkill -f "cycle_through"
 pkill -f "fill_wordclock"
 
 echo "Getting options - prepared for use of multiple options"
-while getopts ":awpfrc" options; do              # Loop: Get the next option;
+while getopts ":awpfrct" options; do              # Loop: Get the next option;
                                                # use silent error checking;
                                                # options n and t take arguments.
   case "${options}" in                         # 
@@ -38,6 +38,10 @@ while getopts ":awpfrc" options; do              # Loop: Get the next option;
     c)
       echo "Kill all running processes"
       sudo pkill -f python
+      ;;
+    t)
+      echo "Fill wordclock with a temperature!"
+      sudo python /home/pi/piprojects/clock_functions/show_temperature.py
       ;;
     \? )
       echo "Usage: ./start_wordclock_scripts.sh [-w/p/f]"
