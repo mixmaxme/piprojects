@@ -37,7 +37,7 @@ def get_temperature(temp):
           17: sieb_1+zehn_2,
           18: acht_1+zehn_2,
           19: neun_1+zehn_2,
-          20: zwanzig_2,
+          20: zwanzig_1,
           21: ein_2+und_2+zwanzig_1,
           22: zwei_1+und_2+zwanzig_1,
           23: drei_1+und_2+zwanzig_1,
