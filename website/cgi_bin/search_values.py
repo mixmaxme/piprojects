@@ -9,7 +9,7 @@ helligkeit = form.getvalue('h-wert')
 alleshell = form.getvalue('a-wert')
 geschwindigkeit = form.getvalue('v-wert')
 
-f = open("/home/pi/piprojects/website/brightness.py", "w+")
+f = open("/home/pi/piprojects/website/cgi_bin/brightness.py", "w+")
 
 f.write("r = ")
 f.write(str(rotwert))
