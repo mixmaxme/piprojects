@@ -30,13 +30,13 @@ def get_temperature(temp):
           10: zehn_1,
           11: elf_1,
           12: zwoelf_1,
-          13: drei_2+zehn_2,
-          14: vier_2+zehn_2,
-          15: fuenf_2+zehn_2,
-          16: sech_2+zehn_2,
-          17: sieb_2+zehn_2,
-          18: acht_2+zehn_2,
-          19: neun_2+zehn_2,
+          13: drei_1+zehn_2,
+          14: vier_1+zehn_2,
+          15: fuenf_1+zehn_2,
+          16: sech_1+zehn_2,
+          17: sieb_1+zehn_2,
+          18: acht_1+zehn_2,
+          19: neun_1+zehn_2,
           20: zwanzig_2,
           21: ein_2+und_2+zwanzig_1,
           22: zwei_1+und_2+zwanzig_1,
@@ -166,18 +166,12 @@ warm=(280,279,278,277)
 mittags=(276,275,274,273,272,271,270)
 
 # Start actual infinite while loop to run script
-while True:
-          
-                    
+while True:                              
           # check and light h
           temp,p,h = bme280.readBME280All()
-          temp = int(temp)
-          print(temp)
-          
-          temperature = get_temperature(temp)
-          
+          temp = int(temp)          
+          temperature = get_temperature(temp)         
           temperature = temperature+es+ist+grad+warm
-          print(temperature)
           
           # check brightness
           reload( brightness )
@@ -198,8 +192,7 @@ while True:
           elif b < 0:
                b = 0
           # Reset all LEDs to off
-          pixels.fill((0,0,0))
-          
+          pixels.fill((0,0,0))      
      
           for i in temperature:
                pixels[i]=(int(l*r),int(l*g),int(l*b))
