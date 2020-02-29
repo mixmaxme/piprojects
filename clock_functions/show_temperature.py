@@ -5,7 +5,7 @@ import time                        # for sleep/timing commands
 from importlib import reload
 import brightness
 from brightness import *           # to load/reload variables from file
-import /home/pi/piprojects/i2csensors/bme280
+import bme280
 
 # initialize system
 pixels = neopixel.NeoPixel(board.D18, 288, auto_write=False)
