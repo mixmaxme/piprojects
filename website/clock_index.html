@@ -185,6 +185,8 @@
 .rainbow {color: orange;}  
   .fill {color: blue;}
   .pulse {color: red;}
+  -temp {color: cyan;}
+  .auto {color: blueviolet;}
   
 input {
       border-top-style: hidden;
@@ -235,6 +237,10 @@ input {
 <form action="php_scripts/start_wordclock.php">
     <input type="submit" class="btn wordclock" value="Start Wordclock">
 </form>
+  
+<form action="php_scripts/start_wordclock_auto_brightness.php">
+    <input type="submit" class="btn auto" value="Start Wordclock">
+</form>
 
 <form action="php_scripts/start_rainbow.php">
     <input type="submit" class="btn rainbow" value="Make a rainbow!">
@@ -250,6 +256,10 @@ input {
   
 <form action="php_scripts/start_pulse.php">
     <input type="submit" class="btn pulse" value="Color Cycle Animation!">
+</form>
+  
+<form action="php_scripts/start_temperature.php">
+    <input type="submit" class="btn temp" value="Show Temperature on Wordclock">
 </form>
   
 <form action="php_scripts/clear_clock_scripts.php">
