@@ -281,9 +281,9 @@ while True:
                b = 0
                
           # bring Light sensor into the game
-               l = int(readLight())
-               l = l/500
-               print(l)
+          l = int(readLight())
+          l = l/500
+          print(l)
                
           # Reset all LEDs to off
           pixels.fill((0,0,0))
