@@ -282,7 +282,7 @@ while True:
                
           # bring Light sensor into the game
           l = int(readLight())
-          l = l/100
+          l = l/30
           if l < 0.01:
                l = 0.01
           elif l > 1:
