@@ -10,7 +10,7 @@ while getopts ":abwpfrct" options; do              # Loop: Get the next option;
       echo "Starting Wordclock + Rainbow"
       sudo python /home/pi/piprojects/clock_functions/rainbow_with_clock.py
       ;;
-   b)
+    b)
       echo "Starting autobrightness Wordclock"
       sudo python /home/pi/piprojects/clock_functions/max_wordclock_auto_brightness.py
       ;;
@@ -20,7 +20,7 @@ while getopts ":abwpfrct" options; do              # Loop: Get the next option;
       ;;
     p)                                      
       echo "Starting Colorcycle"
-      sudo python /home/pi/piprojects/clock_functions/cycle_through_colors.py 5
+      sudo python /home/pi/piprojects/clock_functions/cycle_through_colors.py
       ;;
     f)                             
       echo "Fill wordclock with current color"
