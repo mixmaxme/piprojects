@@ -1,19 +1,10 @@
 #!/bin/bash
 
 echo "Killing active sudo python processes"
-rm /home/pi/piprojects/wc_running.info
-sleep 1
-touch /home/pi/piprojects/wc_running.info
-echo "" | sudo -S pkill -f "sudo python"
-pkill -f "max_wordclock"
-pkill -f "rainbow"
-pkill -f "cycle_through"
-pkill -f "fill_wordclock"
+sudo pkill -f python
 
 echo "Getting options - prepared for use of multiple options"
 while getopts ":abwpfrct" options; do              # Loop: Get the next option;
-                                               # use silent error checking;
-                                               # options n and t take arguments.
   case "${options}" in                         # 
     a)
       echo "Starting Wordclock + Rainbow"
@@ -23,15 +14,15 @@ while getopts ":abwpfrct" options; do              # Loop: Get the next option;
       echo "Starting autobrightness Wordclock"
       sudo python /home/pi/piprojects/clock_functions/max_wordclock_auto_brightness.py
       ;;
-    w)                                         # If the option is w
+    w)                                      
       echo "Starting Wordclock"
       sudo python /home/pi/piprojects/clock_functions/max_wordclock_short.py
       ;;
-    p)                                         # If the option is p
+    p)                                      
       echo "Starting Colorcycle"
       sudo python /home/pi/piprojects/clock_functions/cycle_through_colors.py 5
       ;;
-    f)                                         # If the option is f
+    f)                             
       echo "Fill wordclock with current color"
       sudo python /home/pi/piprojects/clock_functions/fill_wordclock.py
       ;;
@@ -52,7 +43,6 @@ while getopts ":abwpfrct" options; do              # Loop: Get the next option;
      ;;
   esac
 done
-
 
 echo "Started / Finished Python script"
 exit 0                                         # Exit normally.
