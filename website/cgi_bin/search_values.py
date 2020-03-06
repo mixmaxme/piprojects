@@ -1,9 +1,9 @@
 #!/usr/bin/python
+print("Content-type:text/html\r\n\r\n")
+print('<html>')
 
-print("Content-Type: text/html")    
-print()         
 import cgi, cgitb
-
+cgitb.enable() #for debugging
 form = cgi.FieldStorage()
 rotwert = form.getvalue('r-wert')
 gruenwert = form.getvalue('g-wert')
@@ -35,8 +35,6 @@ f.write("\n")
 
 f.close()
 
-print("Content-type:text/html\r\n\r\n")
-print('<html>')
 print('<head>')
 print('<title>Values saved - you can return to main site</title>')
 print('</head>')
