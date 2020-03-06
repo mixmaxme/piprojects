@@ -1,4 +1,7 @@
-#!/usr/bin/env python
+#!/usr/bin/python
+
+print("Content-Type: text/html")    
+print()         
 import cgi, cgitb
 
 form = cgi.FieldStorage()
