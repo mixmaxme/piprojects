@@ -5,7 +5,7 @@ print()
 import cgi,cgitb
 cgitb.enable() #for debugging
 form = cgi.FieldStorage()
-name = form.getvalue('r-wert')
+name = form.getvalue('fname')
 
 f = open("/home/pi/piprojects/website/cgi_bin/brightness.py", "w+")
 f.write("r = ")
