@@ -1,6 +1,6 @@
 #!/usr/bin/python
-print("Content-type:text/html\r\n\r\n")
-print('<html>')
+#print("Content-type:text/html\r\n\r\n")
+#print('<html>')
 
 import cgi, cgitb
 cgitb.enable() #for debugging
@@ -59,12 +59,12 @@ f.write("\n")
 
 f.close()
 
-print('<head>')
-print('<title>Values saved - you can return to main site</title>')
-print('</head>')
-print('<body>')
-print('<h2><font face="verdana">Values saved - you can return to main site</font></h2>')
-print('<h2><font face="verdana">You might need to restart the running Mode</font></h2>')
-print('<a href="http://raspberrypi/clock_index.html"><font face="verdana">Return to main site.</font></a>')
-print('</body>')
-print('</html>')
+#print('<head>')
+#print('<title>Values saved - you can return to main site</title>')
+#print('</head>')
+#print('<body>')
+#print('<h2><font face="verdana">Values saved - you can return to main site</font></h2>')
+#print('<h2><font face="verdana">You might need to restart the running Mode</font></h2>')
+#print('<a href="http://raspberrypi/clock_index.html"><font face="verdana">Return to main site.</font></a>')
+#print('</body>')
+#print('</html>')
