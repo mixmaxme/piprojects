@@ -181,6 +181,7 @@
   .pulse {color: red;}
   .temp {color: cyan;}
   .auto {color: blueviolet;}
+  .wordpulse {color: cyan;}
 
  .colorbtn {
     border: none;

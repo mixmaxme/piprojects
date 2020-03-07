@@ -4,12 +4,8 @@ echo "Killing active sudo python processes"
 sudo pkill -f python
 
 echo "Getting options - prepared for use of multiple options"
-while getopts ":abwpfrct" options; do              # Loop: Get the next option;
+while getopts ":abwpfrctq" options; do              # Loop: Get the next option;
   case "${options}" in                         # 
-    a)
-      echo "Starting Wordclock + Rainbow"
-      sudo python /home/pi/piprojects/clock_functions/rainbow_with_clock.py
-      ;;
     b)
       echo "Starting autobrightness Wordclock"
       sudo python /home/pi/piprojects/clock_functions/max_wordclock_auto_brightness.py
@@ -17,6 +13,10 @@ while getopts ":abwpfrct" options; do              # Loop: Get the next option;
     w)                                      
       echo "Starting Wordclock"
       sudo python /home/pi/piprojects/clock_functions/max_wordclock_short.py
+      ;;
+    a)
+      echo "Starting Wordclock + Rainbow"
+      sudo python /home/pi/piprojects/clock_functions/rainbow_with_clock.py
       ;;
     p)                                      
       echo "Starting Colorcycle"
@@ -38,6 +38,9 @@ while getopts ":abwpfrct" options; do              # Loop: Get the next option;
       echo "Fill wordclock with a temperature!"
       sudo python /home/pi/piprojects/clock_functions/show_temperature.py
       ;;
+    q)
+      echo "Start wordclock with color cycle"
+      sudo python /home/pi/piprojects/clock_functions/cycle_through_colors_with_clock.py
     \? )
       echo "Usage: ./start_wordclock_scripts.sh [-w/p/f]"
      ;;
