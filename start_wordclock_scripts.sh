@@ -41,6 +41,7 @@ while getopts ":abwpfrctq" options; do              # Loop: Get the next option;
     q)
       echo "Start wordclock with color cycle"
       sudo python /home/pi/piprojects/clock_functions/cycle_through_colors_with_clock.py
+      ;;
     \? )
       echo "Usage: ./start_wordclock_scripts.sh [-w/p/f]"
      ;;
