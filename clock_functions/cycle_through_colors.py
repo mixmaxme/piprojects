@@ -37,7 +37,3 @@ while True:
           for i in range(6*s):
                   pixels.fill((r[i],g[i],b[i]))
                   time.sleep(0.04)
-          # Redefine slowness
-          reload( brightness )
-          from brightness import *
-          s=int(1/v)
