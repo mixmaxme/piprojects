@@ -227,6 +227,7 @@ while True:
      dayhour = daynow.hour
      dayminute = daynow.minute
      
+     print ("Got Datetime")
      # get timerange of the day
      if dayminute != olddayminute:   
         if dayhour > 12:
@@ -254,7 +255,7 @@ while True:
         lighthour = get_light_hour(dayhour)
         lightminute = get_light_minute(dayminute)
         lighttime = es+ist+lighthour+uhr+und_2+lightminute+tageszeit
-
+     print("figured out lightning")
 # Fill up pixels
      for i in range(6*s):
             pixels.fill((rold[i],gold[i],bold[i]))
