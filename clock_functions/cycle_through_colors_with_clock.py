@@ -228,7 +228,8 @@ while True:
      dayminute = daynow.minute
      
      # get timerange of the day
-     if dayhour > 12:
+     if dayminute != olddayminute:   
+        if dayhour > 12:
                dayhour = dayhour-12
                tageszeit = mittags
                if dayhour > 5:
@@ -236,7 +237,7 @@ while True:
                elif dayhour > 9:
                     tageszeit = nachts
           
-     else:
+        else:
                tageszeit = morgens
                if dayhour == 1:
                     tageszeit = nachts
@@ -249,18 +250,18 @@ while True:
                elif dayhour == 0:
                     tageszeit = mitternacht
                     
-          # check and light h
-     lighthour = get_light_hour(dayhour)
-     lightminute = get_light_minute(dayminute)
-     lighttime = es+ist+lighthour+uhr+und_2+lightminute+tageszeit
+          # check and light h 
+        lighthour = get_light_hour(dayhour)
+        lightminute = get_light_minute(dayminute)
+        lighttime = es+ist+lighthour+uhr+und_2+lightminute+tageszeit
 
 # Fill up pixels
      for i in range(6*s):
             pixels.fill((rold[i],gold[i],bold[i]))
      for i in lighttime:
-            pixels[i]=(r,g,b)
-      
+            pixels[i]=(r,g,b) 
      pixels.show()
+     print("Changing color")
 
      time.sleep(0.03)
      reload( brightness )
