@@ -79,7 +79,10 @@ Velocity: <input type="text" id="vwert" name="vwert" /><br>
 <script>
 var slider_red = document.getElementById("color_r");
 var output_red = document.getElementById("r_value");
+var field_red = document.getElementById("rwert");
 output_red.innerHTML = slider_red.value;
+field_red.innerHTML = slider_red.value;
+
 
 var slider_green = document.getElementById("color_g");
 var output_green = document.getElementById("g_value");
@@ -99,7 +102,7 @@ output.innerHTML = slider.value;
   
 slider_red.oninput = function() {
   output_red.innerHTML = this.value;
-  document.getElementById("rwert") = this.value;
+  field_red.innerHTML = this.value;
 }
 slider_green.oninput = function() {
   output_green.innerHTML = this.value;
