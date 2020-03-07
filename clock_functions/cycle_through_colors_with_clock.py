@@ -264,5 +264,3 @@ while True:
      print("Changing color")
 
      time.sleep(0.03)
-     reload( brightness )
-     from brightness import *
