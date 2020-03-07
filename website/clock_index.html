@@ -97,9 +97,9 @@ var slider_bright = document.getElementById("brightness");
 var output_bright = document.getElementById("bright_value");
 output_bright.innerHTML = slider_bright.value;  
 
-var slider_bright = document.getElementById("brightness");
-var output_bright = document.getElementById("bright_value_all");
-output_bright.innerHTML = slider_bright.value;  
+var slider_bright_2 = document.getElementById("brightness");
+var output_bright_2 = document.getElementById("bright_value_all");
+output_bright_2.innerHTML = slider_bright_2.value;  
   
 var slider = document.getElementById("velocity");
 var output = document.getElementById("v_value");
@@ -108,6 +108,7 @@ output.innerHTML = slider.value;
 slider_red.oninput = function() {
   output_red.innerHTML = this.value;
   field_red.innerHTML = this.value;
+  document.getElementById('rwert').value=slider_red.value
 }
 slider_green.oninput = function() {
   output_green.innerHTML = this.value;
@@ -118,14 +119,18 @@ slider_blue.oninput = function() {
 slider_bright.oninput = function() {
   output_bright.innerHTML = this.value;
 }
+slider_bright_2.oninput = function() {
+  output_bright_2.innerHTML = this.value;
+}
 slider.oninput = function() {
   output.innerHTML = this.value;
 }
 
-document.getElementById('gwert').value=slider_red.value
-document.getElementById('bwert').value=slider_red.value
-document.getElementById('hwert').value=slider_red.value
-document.getElementById('vwert').value=slider_red.value
+document.getElementById('gwert').value=slider_green.value
+document.getElementById('bwert').value=slider_blue.value
+document.getElementById('hwert').value=slider_bright.value
+document.getElementById('awert').value=slider_bright_2.value
+document.getElementById('vwert').value=slider.value
 
 </script>
   
