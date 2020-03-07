@@ -1,4 +1,4 @@
 <?php
-shell_exec("/home/pi/piprojects/start_wordclock_scripts.sh -r");
+shell_exec("/home/pi/piprojects/start_wordclock_scripts.sh -r &");
 header('Location: http://raspberrypi/clock_index.html?success=true');
 ?>
