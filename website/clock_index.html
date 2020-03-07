@@ -103,6 +103,7 @@ output.innerHTML = slider.value;
 slider_red.oninput = function() {
   output_red.innerHTML = this.value;
   field_red.innerHTML = this.value;
+  document.getElementById("rwert") = slider_red.value;
 }
 slider_green.oninput = function() {
   output_green.innerHTML = this.value;
