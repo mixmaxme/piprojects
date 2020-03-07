@@ -19,7 +19,7 @@
   <p><font face="verdana">Brightness [%]: <span id="bright_value"></span></font></p>
   <input type="range" min="0" max="100" value="50" class="slider_bright" id="brightness"/>
   <p><font face="verdana">Brightness all LED [%]: <span id="bright_value_all"></span></font></p>
-  <input type="range" min="0" max="100" value="50" class="slider_bright" id="brightness"/>
+  <input type="range" min="0" max="100" value="50" class="slider_bright" id="brightness_2"/>
   <p><font face="verdana">Velocity: <span id="v_value"></span></font></p>
   <input type="range" min="0" max="100" value="1" class="slider" id="velocity"/>
 </div>
@@ -97,7 +97,7 @@ var slider_bright = document.getElementById("brightness");
 var output_bright = document.getElementById("bright_value");
 output_bright.innerHTML = slider_bright.value;  
 
-var slider_bright_2 = document.getElementById("brightness");
+var slider_bright_2 = document.getElementById("brightness_2");
 var output_bright_2 = document.getElementById("bright_value_all");
 output_bright_2.innerHTML = slider_bright_2.value;  
   
