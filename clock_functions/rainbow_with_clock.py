@@ -13,9 +13,6 @@ nol = 288
 # get slowness
 s = int(nol/6)
 v = int(v*50)
-rold = r
-gold = g
-bold = b
 
 # initialize system
 pixels = neopixel.NeoPixel(board.D18, nol, auto_write=False)
@@ -32,18 +29,18 @@ flattop = numpy.linspace(a, a, s)
 cosdown = 0.5 * a * (numpy.cos(l) + 1)
 flatbottom = numpy.linspace(0, 0, s)
 
-r = numpy.concatenate([flattop, cosdown, flatbottom, flatbottom, cosup, flattop])
-g = numpy.concatenate([cosup, flattop, flattop, cosdown, flatbottom, flatbottom])
-b = numpy.concatenate([flatbottom, flatbottom, cosup, flattop, flattop, cosdown])
+rold = numpy.concatenate([flattop, cosdown, flatbottom, flatbottom, cosup, flattop])
+gold = numpy.concatenate([cosup, flattop, flattop, cosdown, flatbottom, flatbottom])
+bold = numpy.concatenate([flatbottom, flatbottom, cosup, flattop, flattop, cosdown])
 
 # make intarray out of floatarray
-r = r.astype(int)
-g = g.astype(int)
-b = b.astype(int)
+rold = rold.astype(int)
+gold = gold.astype(int)
+bold = bold.astype(int)
 
-r = deque(r)
-g = deque(g)
-b = deque(b)
+rold = deque(rold)
+gold = deque(gold)
+bold = deque(bold)
 
 # Hourfunction
 def get_light_hour(hour):
@@ -263,9 +260,9 @@ while True:
 
 # Fill up pixels
      for i in range(nol):
-            pixels[i]=(r[i],g[i],b[i])   
+            pixels[i]=(rold[i],gold[i],bold[i])   
      for i in lighttime:
-            pixels[i]=(rold,gold,bold)
+            pixels[i]=(r,g,b)
       
      pixels.show()
      r.rotate(v)
@@ -273,5 +270,5 @@ while True:
      b.rotate(v)
      time.sleep(0.03)
      reload( brightness )
-     from brightness import v
+     from brightness import *
      v = int(v*50)

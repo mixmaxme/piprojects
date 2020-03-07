@@ -1,6 +1,8 @@
 import board
 import neopixel                    # to control LEDs
 import time                        # for sleep/timing commands
+from importlib import reload
+import brightness
 from brightness import *           # to load/reload variables from file
 import numpy                       # for the cosinus / linspace functions
 
@@ -34,5 +36,8 @@ print("Script started running...")
 while True:
           for i in range(6*s):
                     pixels.fill((r[i],g[i],b[i]))
-                    time.sleep(0.04)
- 
+                  time.sleep(0.04)
+          # Redefine slowness
+          reload( brightness )
+          from brightness import *
+          s=int(1/v)
