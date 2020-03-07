@@ -80,9 +80,6 @@ Velocity: <input type="text" id="vwert" name="vwert" /><br></p>
   
 <script>
 
-var redvalue = document.cookie;
-document.getElementById('color_r')=redvalue;
-
 var slider_red = document.getElementById("color_r");
 var output_red = document.getElementById("r_value");
 var field_red = document.getElementById("rwert");
@@ -165,6 +162,9 @@ document.getElementById('color_r').addEventListener('input',changeColor);
 document.getElementById('color_g').addEventListener('input',changeColor);
 document.getElementById('color_b').addEventListener('input',changeColor);
 
+
+var redvalue = document.cookie;
+document.getElementById('color_r')=redvalue.value;
 </script>
   
 </body>
