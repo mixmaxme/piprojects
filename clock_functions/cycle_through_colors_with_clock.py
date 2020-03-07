@@ -259,9 +259,9 @@ while True:
 # Fill up pixels
      for i in range(6*s):
             pixels.fill((rold[i],gold[i],bold[i]))
-     for i in lighttime:
-            pixels[i]=(r,g,b) 
-     pixels.show()
-     print("Changing color")
+            for i in lighttime:
+                pixels[i]=(r,g,b) 
+            pixels.show()
+            print("Changing color")
 
      time.sleep(0.03)
