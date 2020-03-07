@@ -12,6 +12,8 @@ helligkeit = form.getvalue('hwert')
 alleshell = form.getvalue('awert')
 geschwindigkeit = form.getvalue('vwert')
 
+# Insert Tests to validate values
+
 f = open("/home/pi/piprojects/clock_functions/brightness.py", "w+")
 
 f.write("r = ")
@@ -30,7 +32,7 @@ f.write("a = ")
 f.write(alleshell)
 f.write("\n")
 f.write("v = ")
-f.write(geschwindigkeit)
+f.write(geschwindigkeit/100)
 f.write("\n")
 
 f.close()
