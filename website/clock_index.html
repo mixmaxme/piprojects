@@ -25,7 +25,7 @@
 <center><font face="verdana">
 <form name="pyform" method="POST" action="cgi_bin/search_values.py">
   <br>
-Red Value: <input type="text" id="rwert" name="rwert" value='<span id="r_value"></span>' /> <br>
+Red Value: <input type="text" id="rwert" name="rwert" /> <br>
 Green Value: <input type="text" id="gwert" name="gwert" value="200"/> <br>
 Blue Value: <input type="text" id="bwert" name="bwert" value="200"/> <br>
 Brightness (wordclock): <input type="text" id="hwert" name="hwert" value="1"/> <br>
@@ -113,6 +113,8 @@ slider_bright.oninput = function() {
 slider.oninput = function() {
   output.innerHTML = this.value;
 }
+
+document.getElementById('rwert').value='Textobedisplayed'
 
 </script>
   
