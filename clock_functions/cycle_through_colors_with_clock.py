@@ -261,10 +261,7 @@ while True:
             pixels[i]=(r,g,b)
       
      pixels.show()
-     rold.rotate(v)
-     gold.rotate(v)
-     bold.rotate(v)
+
      time.sleep(0.03)
      reload( brightness )
      from brightness import *
-     v = int(v*50)
