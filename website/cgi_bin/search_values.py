@@ -61,7 +61,7 @@ f.close()
 
 print('<head>')
 print('<title>Values saved - you can return to main site</title>')
-print('<meta http-equiv="refresh" content = "2; url = http://raspberrypi/clock_index.html" />')
+print('<meta http-equiv="refresh" content = "0; url = http://raspberrypi/clock_index.html" />')
 print('</head>')
 print('<body>')
 #print('<h2><font face="verdana">Values saved - you can return to main site</font></h2>')
