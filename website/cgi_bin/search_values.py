@@ -5,12 +5,12 @@ print('<html>')
 import cgi, cgitb
 cgitb.enable() #for debugging
 form = cgi.FieldStorage()
-rotwert = form.getvalue('r-wert')
-gruenwert = form.getvalue('g-wert')
-blauwert = form.getvalue('b-wert')
-helligkeit = form.getvalue('h-wert')
-alleshell = form.getvalue('a-wert')
-geschwindigkeit = form.getvalue('v-wert')
+rotwert = form.getvalue('rwert')
+gruenwert = form.getvalue('gwert')
+blauwert = form.getvalue('bwert')
+helligkeit = form.getvalue('hwert')
+alleshell = form.getvalue('awert')
+geschwindigkeit = form.getvalue('vwert')
 
 f = open("/home/pi/piprojects/website/cgi_bin/brightness.py", "w+")
 
