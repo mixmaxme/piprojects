@@ -6,14 +6,18 @@ import cgi, cgitb
 cgitb.enable() #for debugging
 form = cgi.FieldStorage()
 # RGB Values
-rotwert = form.getvalue('rwert')
-gruenwert = form.getvalue('gwert')
-blauwert = form.getvalue('bwert')
+rotwert = int(form.getvalue('rwert'))
+gruenwert = int(form.getvalue('gwert'))
+blauwert = int(form.getvalue('bwert'))
 
 # 0...1 from RGB
-helligkeit = form.getvalue('hwert')
-alleshell = form.getvalue('awert')
-geschwindigkeit = form.getvalue('vwert')
+helligkeit = int(form.getvalue('hwert'))
+
+# 0...100 for absolute lightning intensity
+alleshell = int(form.getvalue('awert'))
+
+# 0...1 due to later (mathematical) restrictions
+geschwindigkeit = int(form.getvalue('vwert'))
 
 # Insert Tests to validate values
 
