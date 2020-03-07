@@ -181,6 +181,7 @@
   .pulse {color: red;}
   .temp {color: cyan;}
   .auto {color: blueviolet;}
+  .background {color: rgb(200,100,100)}
     
   input {
         border-top-style: hidden;
