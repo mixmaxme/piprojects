@@ -256,7 +256,7 @@ while True:
           g = int((r/255)*g)
           b = int((r/255)*b)
 
-          print(r,g,b)
+          print(a,r,g,b)
           # Reset all LEDs to chosen color
           pixels.fill((r,g,b))     
           for i in lighttime:
