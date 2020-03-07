@@ -251,9 +251,14 @@ while True:
                b = 255
           elif b < 0:
                b = 0
+         
+          r = int((r/255)*a)
+          g = int((r/255)*g)
+          b = int((r/255)*b)
 
+          print(r,g,b)
           # Reset all LEDs to chosen color
-          pixels.fill((int((r/255)*a),int((r/255)*g),int((r/255)*b)))     
+          pixels.fill((r,g,b))     
           for i in lighttime:
                pixels[i]=(int(l*255),int(l*255),int(l*255))
           pixels.show()
