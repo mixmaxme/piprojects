@@ -11,11 +11,11 @@
 
 <div class="slidecontainer">
   <p><font face="verdana">Red value: <span id="r_value"></span></font></p>
-  <input type="range" min="1" max="255" value="100" class="slider_red" id="color_r"/>
+  <input type="range" min="0" max="255" value="100" class="slider_red" id="color_r"/>
   <p><font face="verdana">Green value: <span id="g_value"></span></font></p>
-  <input type="range" min="1" max="255" value="100" class="slider_green" id="color_g"/>
+  <input type="range" min="0" max="255" value="100" class="slider_green" id="color_g"/>
   <p><font face="verdana">Blue value: <span id="b_value"></span></font></p>
-  <input type="range" min="1" max="255" value="100" class="slider_blue" id="color_b"/>
+  <input type="range" min="0" max="255" value="100" class="slider_blue" id="color_b"/>
   <p><font face="verdana">Brightness [%]: <span id="bright_value"></span></font></p>
   <input type="range" min="0" max="100" value="50" class="slider_bright" id="brightness"/>
   <p><font face="verdana">Brightness all LED [%]: <span id="bright_value_all"></span></font></p>
@@ -147,10 +147,17 @@ slider.oninput = function() {
   document.getElementById('vwert').value=slider.value
 }
 
+function changeColor() {
+  let red = document.getElementById('color_r').val;
+  let green = document.getElementById('color_g').val;
+  let blue = document.getElementById('color_b').val;
+  let color = 'rgb(' + red + ',' + green + ',' + blue + ')';
+  document.body.style.backgroundColor = color;
+}
 
-
-
-
+document.getElementById('color_r').addEventListener('input',changeColor);
+document.getElementById('color_g').addEventListener('input',changeColor);
+document.getElementById('color_b').addEventListener('input',changeColor);
 
 </script>
   
