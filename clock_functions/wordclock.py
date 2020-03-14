@@ -29,7 +29,7 @@ while True:
      # perform script only when time (minute) has changed
      if dayminute != olddayminute:          
           # get light time
-          lighttime = cf.get_light_time(dayhour,dayminute)
+          lighttime = cf.get_light_time_1(dayhour,dayminute)
           
           # check brightness
           reload( brightness )
