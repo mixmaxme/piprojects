@@ -14,7 +14,7 @@ def get_light_hour(hour):
           9: neun_1,
           10: zehn_1,
           11: elf_1,
-          12: zwoelf_1
+          12: zwoelf_1,
           13: ein_1,
           14: zwei_1,
           15: drei_1,
