@@ -1,21 +1,4 @@
-import board
-import neopixel                    # to control LEDs
-import datetime                    # for datetime management
-import time                        # for sleep/timing commands
-from importlib import reload
-import brightness
-from brightness import *           # to load/reload variables from file
-#import os.path                     # to check if file exists
-
-# initialize system
-pixels = neopixel.NeoPixel(board.D18, 288, auto_write=False)
-pixels.fill((0,0,0))
-pixels.show()
-olddayminute=0
-oncount=0
-
 # define functions
-
 # Hourfunction
 def get_light_hour(hour):
      hourdict = {
@@ -103,6 +86,131 @@ def get_light_minute(minute):
      lightminute=mindict[minute]
      return lightminute
 
+# Minutefunction with "halb" "viertel" "nach"
+def get_light_minute_1(minute):
+     mindict = {
+          0: null_2+minuten_2,
+          1: eine_2+minute_2,
+          2: zwei_2+minuten_2,
+          3: drei_2+minuten_2,
+          4: vier_2+minuten_2,
+          5: fuenf_2+minuten_2,
+          6: sechs_2+minuten_2,
+          7: sieben_2+minuten_2,
+          8: acht_2+minuten_2,
+          9: neun_2+minuten_2,
+          10: zehn_2+minuten_2,
+          11: elf_2+minuten_2,
+          12: zwoelf_2+minuten_2,
+          13: drei_2+zehn_2+minuten_2,
+          14: vier_2+zehn_2+minuten_2,
+          15: viertel+nach_1,
+          16: sech_2+zehn_2+minuten_2,
+          17: sieb_2+zehn_2+minuten_2,
+          18: acht_2+zehn_2+minuten_2,
+          19: neun_2+zehn_2+minuten_2,
+          20: zwanzig_2+minuten_2,
+          21: ein_4+und_3+zwanzig_2+minuten_2,
+          22: zwei_2+und_3+zwanzig_2+minuten_2,
+          23: drei_2+und_3+zwanzig_2+minuten_2,
+          24: vier_2+und_3+zwanzig_2+minuten_2,
+          25: fuenf_2+und_3+zwanzig_2+minuten_2,
+          26: sechs_2+und_3+zwanzig_2+minuten_2,
+          27: sieben_2+und_3+zwanzig_2+minuten_2,
+          28: acht_2+und_3+zwanzig_2+minuten_2,
+          29: neun_2+und_3+zwanzig_2+minuten_2,
+          30: halb,
+          31: ein_4+und_3+dreissig_2+minuten_2,
+          32: zwei_2+und_3+dreissig_2+minuten_2,
+          33: drei_2+und_3+dreissig_2+minuten_2,
+          34: vier_2+und_3+dreissig_2+minuten_2,
+          35: fuenf_2+und_3+dreissig_2+minuten_2,
+          36: sechs_2+und_3+dreissig_2+minuten_2,
+          37: sieben_2+und_3+dreissig_2+minuten_2,
+          38: acht_2+und_3+dreissig_2+minuten_2,
+          39: neun_2+und_3+dreissig_2+minuten_2,
+          40: vierzig_2+minuten_2,
+          41: ein_4+und_3+vierzig_2+minuten_2,
+          42: zwei_2+und_3+vierzig_2+minuten_2,
+          43: drei_2+und_3+vierzig_2+minuten_2,
+          44: vier_2+und_3+vierzig_2+minuten_2,
+          45: viertel+vor_1,
+          46: sechs_2+und_3+vierzig_2+minuten_2,
+          47: sieben_2+und_3+vierzig_2+minuten_2,
+          48: acht_2+und_3+vierzig_2+minuten_2,
+          49: neun_2+und_3+vierzig_2+minuten_2,
+          50: fuenfzig_2+minuten_2,
+          51: ein_4+und_3+fuenfzig_2+minuten_2,
+          52: zwei_2+und_3+fuenfzig_2+minuten_2,
+          53: drei_2+und_3+fuenfzig_2+minuten_2,
+          54: vier_2+und_3+fuenfzig_2+minuten_2,
+          55: fuenf_2+und_3+fuenfzig_2+minuten_2,
+          56: sechs_2+und_3+fuenfzig_2+minuten_2,
+          57: sieben_2+und_3+fuenfzig_2+minuten_2,
+          58: acht_2+und_3+fuenfzig_2+minuten_2,
+          59: neun_2+und_3+fuenfzig_2+minuten_2
+     }
+     lightminute=mindict[minute]
+     return lightminute
+
+def get_daytime(hour):
+     daydict = {
+          0: mitternacht,
+          1: nachts,
+          2: nachts,
+          3: nachts,
+          4: morgens,
+          5: morgens,
+          6: morgens,
+          7: morgens,
+          8: morgens,
+          9: morgens,
+          10: morgens,
+          11: mittags,
+          12: mittags,
+          13: mittags,
+          14: mittags,
+          15: mittags,
+          16: mittags,
+          17: abends,
+          18: abends,
+          19: abends,
+          20: abends,
+          21: abends,
+          22: nachts,
+          23: nachts
+     }
+     tageszeit=daydict[hour]
+     return tageszeit
+
+               
+def get_light_time_normal(hour,minute):
+     # redefine variables
+     dayhour = hour
+     dayminute = minute
+     
+     # get lit LEDs from earlier defined functions
+     lighthour = get_light_hour(dayhour)
+     lightminute = get_light_minute(dayminute)
+     tageszeit = get_daytime(dayhour)
+     lighttime = es+ist+lighthour+uhr+und_2+lightminute+tageszeit
+     
+def get_light_time_1(hour,minute):
+     dayhour = hour
+     dayminute = minute
+     
+     if dayminute in (30, 45):
+          dayhour = dayhour + 1
+          lighthour = get_light_hour(dayhour)
+          lightminute = get_light_minute(dayminute)
+          tageszeit = get_daytime(dayhour)
+          lighttime = es+ist+lighthour+lightminute+tageszeit
+      else
+          lighthour = get_light_hour(dayhour)
+          lightminute = get_light_minute(dayminute)
+          tageszeit = get_daytime(dayhour)
+          lighttime = es+ist+lighthour+uhr+und_2+lightminute+tageszeit    
+      
 # define all occurring words of 24h wordclock (take care - alternating LED numbering)
 # Zeile 1
 es=(0,1)
@@ -195,40 +303,3 @@ nachts=(264,265,266,267,268,269)
 morgens=(287,286,285,284,283,282,281)
 warm=(280,279,278,277)
 mittags=(276,275,274,273,272,271,270)
-
-# Start actual infinite while loop to run script
-#while os.path.exists("/home/pi/piprojects/wc_running.info"):
-while True:
-     # get current time
-     daynow = datetime.datetime.now()
-     dayhour = daynow.hour
-     dayminute = daynow.minute
-     
-     # perform script only when time (minute) has changed
-     if dayminute != olddayminute:          
-          # get timerange of the day
-          if dayhour > 12:
-               dayhour = dayhour-12
-               tageszeit = mittags
-               if dayhour > 5:
-                    tageszeit = abends
-               elif dayhour > 9:
-                    tageszeit = nachts
-          
-          else:
-               tageszeit = morgens
-               if dayhour == 1:
-                    tageszeit = nachts
-               elif dayhour == 2:
-                    tageszeit = frueh
-               elif dayhour == 3:
-                    tageszeit = frueh
-               elif dayhour == 4:
-                    tageszeit = frueh
-               elif dayhour == 0:
-                    tageszeit = mitternacht
-                    
-          # check and light h
-          lighthour = get_light_hour(dayhour)
-          lightminute = get_light_minute(dayminute)
-          lighttime = es+ist+lighthour+uhr+und_2+lightminute+tageszeit
