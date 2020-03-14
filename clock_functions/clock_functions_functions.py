@@ -15,6 +15,18 @@ def get_light_hour(hour):
           10: zehn_1,
           11: elf_1,
           12: zwoelf_1
+          13: ein_1,
+          14: zwei_1,
+          15: drei_1,
+          16: vier_1,
+          17: fuenf_1,
+          18: sechs_1,
+          19: sieben_1,
+          20: acht_1,
+          21: neun_1,
+          22: zehn_1,
+          23: elf_1,
+          24: zwoelf_1
      }
      lighthour = hourdict[hour]
      return lighthour
