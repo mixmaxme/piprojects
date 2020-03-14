@@ -195,6 +195,9 @@ def get_light_time_normal(hour,minute):
      tageszeit = get_daytime(dayhour)
      lighttime = es+ist+lighthour+uhr+und_2+lightminute+tageszeit
      
+     return lighttime
+
+     
 def get_light_time_1(hour,minute):
      dayhour = hour
      dayminute = minute
@@ -210,6 +213,8 @@ def get_light_time_1(hour,minute):
           lightminute = get_light_minute(dayminute)
           tageszeit = get_daytime(dayhour)
           lighttime = es+ist+lighthour+uhr+und_2+lightminute+tageszeit    
+      
+     return lighttime
       
 # define all occurring words of 24h wordclock (take care - alternating LED numbering)
 # Zeile 1
