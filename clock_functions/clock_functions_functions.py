@@ -208,7 +208,7 @@ def get_light_time_1(hour,minute):
           lightminute = get_light_minute(dayminute)
           tageszeit = get_daytime(dayhour)
           lighttime = es+ist+lighthour+lightminute+tageszeit
-      else
+     else:
           lighthour = get_light_hour(dayhour)
           lightminute = get_light_minute(dayminute)
           tageszeit = get_daytime(dayhour)
