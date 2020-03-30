@@ -23,7 +23,7 @@ im_rgb = Image.open("/home/pi/piprojects/pictures/mario18x16.jpg")
 
 # make shifting list
 rearrange = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
-for j in range(2,8):
+for j in range(2,9):
     for i in range((18*(j-1)*2),(18*(j-1)*2)-18,-1):
         rearrange = rearrange + [i]
     for i in range((18*(j-1)*2)+1,(18*(j-1)*2)+19):
@@ -35,7 +35,7 @@ pixel_values = list(im_rgb.getdata())
 
 print(len(rearrange))
 
-for i in range(0,269):
+for i in range(0,287):
     j = int(rearrange[i])-1
     pixels[j] = pixel_values[i]
 
