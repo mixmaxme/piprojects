@@ -33,7 +33,7 @@ for i in range(288,270,-1):
 
 pixel_values = list(im_rgb.getdata())
 
-for i in range(0,270):
+for i in range(0,269):
     j = int(rearrange[i])-1
     pixels[j] = pixel_values[i]
     print(pixel_values[i])
