@@ -15,6 +15,8 @@ pixels.show()
 
 # Load image
 im = Image.open("/home/pi/piprojects/pictures/mario18x16.png")
+im_small = im.resize((18, 16))
+
 pix = im.load
 
 pixeltemp = pixels
