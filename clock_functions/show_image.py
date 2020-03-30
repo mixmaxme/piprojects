@@ -21,9 +21,8 @@ pix = im.load
 
 # make shifting list
 rearrange = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
-rearrange = rearrange + [36, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 20, 19]
 for j in range(2,8):
-    for i in range((18*(j-1)*2),(18*(j-1)*2)-17,-1):
+    for i in range((18*(j-1)*2),(18*(j-1)*2)-18,-1):
         rearrange = rearrange + [i]
     for i in range((18*(j-1)*2)+1,(18*(j-1)*2)+19):
         rearrange = rearrange + [i]
@@ -32,4 +31,6 @@ for i in range(288,270,-1):
 
 print(rearrange)
 
-print(pix)
+for i in range(1,18):
+    for j in range(1,16):
+        print(pix[i,j])
