@@ -6,6 +6,7 @@ from importlib import reload
 import brightness
 from brightness import *           # to load/reload variables from file
 import os, sys
+import Image
 
 # initialize system
 pixels = neopixel.NeoPixel(board.D18, 288, auto_write=False)
