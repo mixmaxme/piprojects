@@ -16,6 +16,7 @@ pixels.show()
 # Load image
 im = Image.open("/home/pi/piprojects/pictures/mario18x16.png")
 im_small = im.resize((18, 16))
+im_rgb = im.new("RGB",im_small)
 
 pix = im_small.load
 
@@ -29,11 +30,10 @@ for j in range(2,8):
 for i in range(288,270,-1):
     rearrange = rearrange + [i]
 
-pixel_values = list(im_small.getdata())
+pixel_values = list(im_rgb.getdata())
 print(pixel_values)
 
-print(pix[1,1])
+for i in range(0,288):
+    pixels[rearrange[i]] = pixel_values[i]
 
-for i in range(1,18):
-    for j in range(1,16):
-        print(pix[i,j])
+pixels.show()
