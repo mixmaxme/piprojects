@@ -35,6 +35,9 @@ pixel_values = list(im_rgb.getdata())
 print(pixel_values)
 
 for i in range(0,288):
-    pixels[rearrange[i]] = pixel_values[i]
+    j = int(rearrange[i])
+    print(j)
+    print(i)
+    pixels[j] = pixel_values[i]
 
 pixels.show()
