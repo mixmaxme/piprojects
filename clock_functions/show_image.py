@@ -16,9 +16,7 @@ pixels.show()
 # Load image
 im = Image.open("/home/pi/piprojects/pictures/mario18x16.png")
 im_small = im.resize((18, 16))
-im_rgb = Image.new("RGB",im_small)
-
-pix = im_small.load
+im_rgb = Image.new("RGB",im)
 
 # make shifting list
 rearrange = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
