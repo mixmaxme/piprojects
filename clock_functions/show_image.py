@@ -14,7 +14,7 @@ pixels.fill((0,0,0))
 pixels.show()
 
 # Load image
-im = Image.open("/home/pi/piprojects/pictures/mario18x16.png")
+im = Image.open("/home/pi/piprojects/pictures/yoshi.png")
 im_small = im.resize((18, 16))
 background = Image.new("RGB",im_small.size, (255,255,255))
 background.paste(im_small, mask = im_small.split()[3])
@@ -35,7 +35,7 @@ pixel_values = list(im_rgb.getdata())
 
 print(len(rearrange))
 
-for i in range(0,287):
+for i in range(0,288):
     j = int(rearrange[i])-1
     pixels[j] = pixel_values[i]
 
