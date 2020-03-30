@@ -17,7 +17,7 @@ pixels.show()
 im = Image.open("/home/pi/piprojects/pictures/mario18x16.png")
 im_small = im.resize((18, 16))
 
-pix = im.load
+pix = im_small.load
 
 # make shifting list
 rearrange = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
@@ -29,7 +29,8 @@ for j in range(2,8):
 for i in range(288,270,-1):
     rearrange = rearrange + [i]
 
-print(rearrange)
+pixel_values = list(im_small.getdata())
+print(pixel_values)
 
 print(pix[1,1])
 
