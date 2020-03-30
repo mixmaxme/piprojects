@@ -32,12 +32,10 @@ for i in range(288,270,-1):
     rearrange = rearrange + [i]
 
 pixel_values = list(im_rgb.getdata())
-print(pixel_values)
 
 for i in range(0,200):
     j = int(rearrange[i])-1
-    print(j)
-    print(i)
     pixels[j] = pixel_values[i]
+    print(pixel_values[i])
 
 pixels.show()
