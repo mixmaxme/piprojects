@@ -25,13 +25,13 @@ for j in range(2,8):
     print(j)
     for i in range((18*j*2),(18*j*2)-17,-1):
         print(i)
-        rearrange = rearrange + list(i)
+        rearrange = rearrange + [i]
     for i in range((18*j*2)+1,(18*j*2)+18):
         print(i)
-        rearrange = rearrange + list(i)
+        rearrange = rearrange + [i]
 for i in range(288,270,-1):
     print(i)
-    rearrange = rearrange + list(i)
+    rearrange = rearrange + [i]
 
 print(rearrange)
 
