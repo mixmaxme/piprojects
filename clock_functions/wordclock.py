@@ -15,9 +15,6 @@ pixels.show()
 olddayminute=0
 oncount=0
 
-# define functions
-
-
 # Start actual infinite while loop to run script
 #while os.path.exists("/home/pi/piprojects/wc_running.info"):
 while True:
