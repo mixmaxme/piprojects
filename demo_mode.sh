@@ -4,6 +4,8 @@
 
 echo "Show every available mode"
 
+export PATH=$PATH:/home/pi/piprojects
+
 # Fill wordclock with color
 start_wordclock_scripts -w &
 sleep 30
