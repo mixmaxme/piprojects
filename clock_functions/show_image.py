@@ -13,8 +13,12 @@ pixels = neopixel.NeoPixel(board.D18, 288, auto_write=False)
 pixels.fill((0,0,0))
 pixels.show()
 
+# get import argument
+for eachArg in sys.argv:
+    imagepath = eachArg
+
 # Load image
-im = Image.open("/home/pi/piprojects/pictures/yoshi.png")
+im = Image.open("/home/pi/piprojects/pictures/", imagepath)
 im_small = im.resize((18, 16))
 background = Image.new("RGB",im_small.size, (255,255,255))
 background.paste(im_small, mask = im_small.split()[3])
