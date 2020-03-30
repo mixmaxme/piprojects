@@ -31,6 +31,8 @@ for i in range(288,270,-1):
 
 print(rearrange)
 
+print(pix[1,1])
+
 for i in range(1,18):
     for j in range(1,16):
         print(pix[i,j])
