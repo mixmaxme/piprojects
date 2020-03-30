@@ -18,7 +18,8 @@ for eachArg in sys.argv:
     imagepath = eachArg
 
 # Load image
-im = Image.open("/home/pi/piprojects/pictures/", imagepath)
+filename = "/home/pi/piprojects/pictures/%s" % imagepath
+im = Image.open(filename)
 im_small = im.resize((18, 16))
 background = Image.new("RGB",im_small.size, (255,255,255))
 background.paste(im_small, mask = im_small.split()[3])
