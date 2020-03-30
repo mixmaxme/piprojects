@@ -46,6 +46,10 @@ while getopts ":abwpfrctqe" options; do              # Loop: Get the next option
       echo "Fill wordclock with color and clock"
       sudo python /home/pi/piprojects/clock_functions/fill_with_clock.py
       ;;
+    m)
+      echo "Fill Wordclock with Yoshi!"
+      sudo python /home/pi/piprojects/clock_functions/show_image.py yoshi.png
+      ;;
     \? )
       echo "Usage: ./start_wordclock_scripts.sh [-w/p/f]"
      ;;
