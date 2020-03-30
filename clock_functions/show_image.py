@@ -24,7 +24,7 @@ pixeltemp = pixels
 for i in 1,8:
     n = 1
     for j in 2*i*18,(2*i*18)-18:
-        pixeltemp[2*i,n] = pixels[2*i,j] 
+        pixeltemp(2*i,n) = pixels(2*i,j) 
         n = n + 1
 
 print(pix)
