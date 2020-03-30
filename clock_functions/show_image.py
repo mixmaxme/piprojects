@@ -16,7 +16,7 @@ pixels.show()
 # Load image
 im = Image.open("/home/pi/piprojects/pictures/mario18x16.png")
 im_small = im.resize((18, 16))
-im_rgb = im.new("RGB",im_small)
+im_rgb = Image.new("RGB",im_small)
 
 pix = im_small.load
 
