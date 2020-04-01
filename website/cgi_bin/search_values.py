@@ -32,7 +32,7 @@ if blauwert > 255:
 helligkeit = helligkeit/100
 if helligkeit > 1:
     helligkeit = 1
-alleshell = alleshell*2.5
+alleshell = alleshell*2
 #if alleshell > 100:
 #    alleshell = 100
 geschwindigkeit = geschwindigkeit/100
