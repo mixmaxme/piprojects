@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-echo PRETTY_HOSTNAME=raspberrypi > /etc/machine-info
+echo PRETTY_HOSTNAME=wordclock > /etc/machine-info
 
 # Edit /lib/systemd/system/bluetooth.service to enable BT services
 sudo sed -i: 's|^Exec.*toothd$| \

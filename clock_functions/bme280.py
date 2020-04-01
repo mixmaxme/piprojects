@@ -15,7 +15,7 @@
 # Author : Matt Hawkins
 # Date   : 21/01/2018
 #
-# https://www.raspberrypi-spy.co.uk/
+# https://www.wordclock-spy.co.uk/
 #
 #--------------------------------------
 import smbus

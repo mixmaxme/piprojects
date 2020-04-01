@@ -4,7 +4,7 @@ echo "Killing active sudo python processes"
 sudo pkill -f python
 
 echo "Getting options - prepared for use of multiple options"
-while getopts ":abwpfrctqe" options; do              # Loop: Get the next option;
+while getopts ":abwpfrctqem" options; do              # Loop: Get the next option;
   case "${options}" in                         # 
     b)
       echo "Starting autobrightness Wordclock"
