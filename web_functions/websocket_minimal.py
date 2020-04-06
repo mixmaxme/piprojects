@@ -1,8 +1,6 @@
 import socketio
 import board
 import neopixel
-import brightness
-from brightness import *
 pixels = neopixel.NeoPixel(board.D18, 288)
 pixels.fill((0,0,0))
 
