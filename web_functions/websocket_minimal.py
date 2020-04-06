@@ -7,6 +7,7 @@ pixels = neopixel.NeoPixel(board.D18, 288)
 pixels.fill((0,0,0))
 
 sio = socketio.Client()
+global i 
 i = 0
 
 
@@ -16,8 +17,11 @@ def connect():
 
 @sio.event
 def my_message(data):
-    print('message received with ', data)
-    sio.emit('my response', {'response': 'my response'})
+    pixels[i] = (255,0,0)
+    i = i + 1
+
+@sio.on('newMessage')  
+def on_message(data):
     pixels[i] = (255,0,0)
     i = i + 1
 
@@ -26,6 +30,6 @@ def disconnect():
     print('disconnected from server')
 
 sio.connect('http://localhost:1234')
-sio.wait()
+
 
 print("Shabs konnetn")
