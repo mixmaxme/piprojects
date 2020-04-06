@@ -1,6 +1,6 @@
 #!/usr/bin/python
 import websocket
-import _thread
+import _thread as thread
 import time
 
 def on_message(ws, message):
