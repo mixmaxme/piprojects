@@ -7,24 +7,22 @@ pixels = neopixel.NeoPixel(board.D18, 288)
 pixels.fill((0,0,0))
 
 sio = socketio.Client()
-global i 
 i = 0
+
+def addpixel():
+    global i
+    pixels[i] = (255,0,0)
+    i = i + 1
 
 
 @sio.event
 def connect():
-    print('connection established')
-
-@sio.event
-def my_message(data):
-    pixels[i] = (255,0,0)
-    i = i + 1
+    print('connection established') 
 
 @sio.on('newMessage')  
 def on_message(data):
+    addpixel()
     print("Habs auch gemerkt")
-    pixels[i] = (255,0,0)
-    i = i + 1
 
 @sio.event
 def disconnect():
