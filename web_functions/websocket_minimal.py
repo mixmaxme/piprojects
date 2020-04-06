@@ -1,3 +1,5 @@
+#!/usr/bin/python
+ 
 import socketio
 import board
 import neopixel
