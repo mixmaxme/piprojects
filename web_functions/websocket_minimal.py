@@ -1,6 +1,6 @@
-import websocket
+from websocket import create_connection
 
-ws = websocket.create_connection("http://wordclock:1234")
+ws = create_connection("http://wordclock:1234")
 print("Sending 'Hello World'...")
 ws.send("Hello World")
 print("Sent")
