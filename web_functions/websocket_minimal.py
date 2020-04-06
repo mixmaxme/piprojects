@@ -22,8 +22,8 @@ def my_message(data):
 
 @sio.on('newMessage')  
 def on_message(data):
-    pixels[i] = (255,0,0)
-    i = i + 1
+    pixels[1] = (255,0,0)
+    #i = i + 1
 
 @sio.event
 def disconnect():
