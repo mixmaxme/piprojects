@@ -44,7 +44,8 @@ def on_message(json_data):
     # Load json body
     print("Bin im Script")
     print(json_data)
-
+    print(json_data[0])
+    print(json_data[1])
     # Iterate through every line in the json body
     for i in range(len(json_data)):
         print(json_data[i])
@@ -77,7 +78,6 @@ def on_message(json_data):
 def on_message(json_data):
     # Load json body
     print("Bin im Script")
-    print(json_data)
 
     # Iterate through every line in the json body
     for i in range(len(json_data)):
