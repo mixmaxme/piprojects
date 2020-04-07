@@ -75,7 +75,7 @@ def on_message(json_data):
         else:
             continue
 
-@sio.on('singlePixel')
+@sio.on('s_singlePixel')
 def on_message(json_data):
     # Load json body
     print("Bin im Script")
