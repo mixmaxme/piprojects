@@ -94,8 +94,7 @@ def on_message(json_data):
             continue
 
         #print(json_data['pixelId'])
-        #print(json_data['pixelRow'])
-        #print(json_data['pixelCol'])
+        print(json_data['pixelCol'], json_data['pixelRow'])
 
         if 'pixelId' in json_data: # if ID is not empty
             j = int(rearrange[int(json_data['pixelId'])])-1
