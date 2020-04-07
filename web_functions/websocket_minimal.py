@@ -75,8 +75,42 @@ def on_message(json_data):
         else:
             continue
 
+@sio.on('singlePixel')
+def on_message(json_data):
+    # Load json body
+    print("Bin im Script")
+    print(json_data)
+    #parsed_json = json.loads(json_data)
+    #parsed_json = ImportJson(json_data)
+    #print(parsed_json)
 
+    # Iterate through every line in the json body
+        if json_data['pixelR'] and json_data['pixelG'] and json_data['pixelB']:
+            # import color and check brightness
+            r = int(int(json_data['pixelR'])*float(json_data['pixelA']))
+            if r > 255:
+                r = 255
+            g = int(int(json_data['pixelG'])*float(json_data['pixelA']))
+            if g > 255:
+                g = 255
+            b = int(int(json_data['pixelB'])*float(json_data['pixelA']))
+            if b > 255:
+                b = 255
+        else:
+            continue
 
+        if json_data['pixelId']: # if ID is not empty
+            j = int(rearrange[int(json_data['pixelId'])])-1
+            pixels.fill((0,0,0))
+            pixels[j] = (r, g, b)
+        elif json_data['pixelCol']:
+            if json_data['pixelRow']:
+                value = (18*(int(json_data['pixelRow']) - 1) + int(json_data['pixelCol']))
+                j = int(rearrange[value])
+                pixels.fill((0,0,0))
+                pixels[j] = (r, g, b)
+        else:
+            continue
 
 @sio.event
 def connect():
