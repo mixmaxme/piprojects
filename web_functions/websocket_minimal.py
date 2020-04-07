@@ -103,8 +103,8 @@ def on_message(json_data):
             pixels[j] = (r, g, b)
         elif 'pixelCol' in json_data:
             if 'pixelRow' in json_data:
-                value = (18*(int(json_data['pixelRow'])) + int(json_data['pixelCol']) + 1)
-                j = int(rearrange[value])
+                value = (18*(int(json_data['pixelRow'])) + int(json_data['pixelCol']))
+                j = int(rearrange[value])-1
                 pixels.fill((0,0,0))
                 pixels[j] = (r, g, b)
         else:
