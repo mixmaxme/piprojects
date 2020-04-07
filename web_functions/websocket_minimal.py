@@ -86,3 +86,4 @@ sio.connect('http://localhost:1234')
 
 
 print("Shabs konnetn")
+pixel_on(json_data)
