@@ -44,12 +44,9 @@ def on_message(json_data):
     # Load json body
     print("Bin im Script")
     print(json_data)
-    #parsed_json = json.loads(json_data)
-    #parsed_json = ImportJson(json_data)
-    #print(parsed_json)
 
     # Iterate through every line in the json body
-    for line in json_data:
+    for i in range(len(json_data)):
         if json_data[i]['pixelR'] and json_data[i]['pixelG'] and json_data[i]['pixelB']:
             # import color and check brightness
             r = int(int(json_data[i]['pixelR'])*float(json_data[i]['pixelA']))
@@ -80,12 +77,9 @@ def on_message(json_data):
     # Load json body
     print("Bin im Script")
     print(json_data)
-    #parsed_json = json.loads(json_data)
-    #parsed_json = ImportJson(json_data)
-    #print(parsed_json)
 
     # Iterate through every line in the json body
-    for i in range(len(json_data))
+    for i in range(len(json_data)):
         if json_data[i]['pixelR'] and json_data[i]['pixelG'] and json_data[i]['pixelB']:
             # import color and check brightness
             r = int(int(json_data[i]['pixelR'])*float(json_data[i]['pixelA']))
