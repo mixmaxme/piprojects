@@ -39,8 +39,8 @@ def addpixel():
     pixels[i] = (255,0,0)
     i = i + 1
 
-@sio.event('s_change_pixel')
-def pixel_on(json_data):
+@sio.on('s_changePixel')
+def on_message(json_data):
     # Load json body
     parsed_json = ImportJson(json_data)
 
