@@ -42,6 +42,8 @@ def addpixel():
 @sio.on('s_changePixel')
 def on_message(json_data):
     # Load json body
+    print("Bin im Script")
+    print(json_data)
     parsed_json = ImportJson(json_data)
     print(parsed_json)
     # Iterate through every line in the json body
