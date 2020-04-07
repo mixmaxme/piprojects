@@ -44,6 +44,7 @@ def on_message(json_data):
     # Load json body
     print("Bin im Script")
     print(json_data)
+    #parsed_json = json.loads(json_data)
     #parsed_json = ImportJson(json_data)
     #print(parsed_json)
 
@@ -51,13 +52,13 @@ def on_message(json_data):
     for line in json_data:
         if json_data['pixelR'] and json_data['pixelG'] and json_data['pixelB']:
             # import color and check brightness
-            r = int(int(json_data['pixelR'])*float(json_data['pixelA'])
+            r = int(int(json_data['pixelR'])*float(json_data['pixelA']))
             if r > 255:
                 r = 255
-            g = int(int(json_data['pixelG'])*float(json_data['pixelA'])
+            g = int(int(json_data['pixelG'])*float(json_data['pixelA']))
             if g > 255:
                 g = 255
-            b = int(int(json_data['pixelB'])*float(json_data['pixelA'])
+            b = int(int(json_data['pixelB'])*float(json_data['pixelA']))
             if b > 255:
                 b = 255
         else:
