@@ -81,7 +81,7 @@ def on_message(json_data):
     print("Bin im Script")
 
     # Iterate through every line in the json body
-    #for i in range(len(json_data)):
+    for i in range(1):
         if json_data['pixelR'] and json_data['pixelG'] and json_data['pixelB']:
             # import color and check brightness
             r = int(int(json_data['pixelR'])*float(json_data['pixelA']))
