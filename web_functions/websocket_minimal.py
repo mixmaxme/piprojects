@@ -44,32 +44,29 @@ def on_message(json_data):
     # Load json body
     print("Bin im Script")
     print(json_data)
-    print(len(json_data))
-    print(json_data[0])
-    print(json_data[1])
+
     # Iterate through every line in the json body
     for i in range(len(json_data)):
-        print(json_data[i])
-        if json_data[i]['pixelR'] and json_data[i]['pixelG'] and json_data[i]['pixelB']:
+        if json_data[i]['pixelR'] and json_data['pixelG'] and json_data['pixelB']:
             # import color and check brightness
-            r = int(int(json_data[i]['pixelR'])*float(json_data[i]['pixelA']))
+            r = int(int(json_data['pixelR'])*float(json_data['pixelA']))
             if r > 255:
                 r = 255
-            g = int(int(json_data[i]['pixelG'])*float(json_data[i]['pixelA']))
+            g = int(int(json_data['pixelG'])*float(json_data['pixelA']))
             if g > 255:
                 g = 255
-            b = int(int(json_data[i]['pixelB'])*float(json_data[i]['pixelA']))
+            b = int(int(json_data['pixelB'])*float(json_data['pixelA']))
             if b > 255:
                 b = 255
         else:
             continue
 
-        if json_data[i]['pixelId']: # if ID is not empty
-            j = int(rearrange[int(json_data[i]['pixelId'])])-1
+        if json_data['pixelId']: # if ID is not empty
+            j = int(rearrange[int(json_data['pixelId'])])-1
             pixels[j] = (r, g, b)
-        elif json_data[i]['pixelCol']:
-            if json_data[i]['pixelRow']:
-                value = (18*(int(json_data[i]['pixelRow'])) + int(json_data[i]['pixelCol']) + 1)
+        elif json_data['pixelCol']:
+            if json_data['pixelRow']:
+                value = (18*(int(json_data['pixelRow'])) + int(json_data['pixelCol']) + 1)
                 j = int(rearrange[value])
                 pixels[j] = (r, g, b)
         else:
@@ -78,7 +75,7 @@ def on_message(json_data):
 @sio.on('s_singlePixel')
 def on_message(json_data):
     # Load json body
-    print("Bin im Script")
+    print("Bin im Single Pixel Script")
 
     # Iterate through every line in the json body
     for i in range(1):
