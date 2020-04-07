@@ -44,30 +44,31 @@ def on_message(json_data):
     # Load json body
     print("Bin im Script")
     print(json_data)
-    parsed_json = ImportJson(json_data)
-    print(parsed_json)
+    #parsed_json = ImportJson(json_data)
+    #print(parsed_json)
+
     # Iterate through every line in the json body
-    for line in parsed_json:
-        if line.pixel_r or line.pixel_g or line.pixel_b:
+    for line in json_data:
+        if json_data['pixelR'] and json_data['pixelG'] and json_data['pixelB']:
             # import color and check brightness
-            r = line.pixel_r*line.pixel_a
+            r = int(int(json_data['pixelR'])*float(json_data['pixelA'])
             if r > 255:
                 r = 255
-            g = line.pixel_g*line.pixel_a
+            g = int(int(json_data['pixelG'])*float(json_data['pixelA'])
             if g > 255:
                 g = 255
-            b = line.pixel_b*line.pixel_a
+            b = int(int(json_data['pixelB'])*float(json_data['pixelA'])
             if b > 255:
                 b = 255
         else:
             continue
 
-        if line.pixel_id: # if ID is not empty
-            j = int(rearrange[line.pixel_id])-1
+        if json_data['pixelId']: # if ID is not empty
+            j = int(rearrange[int(json_data['pixelId'])])-1
             pixels[j] = (r, g, b)
-        elif line.pixel_col:
-            if line.pixel_row:
-                value = (18*(line.pixel_row - 1) + line.pixel_col)
+        elif json_data['pixelCol']:
+            if json_data['pixelRow']:
+                value = (18*(json_data['pixelRow'] - 1) + json_data['pixelCol'])
                 j = int(rearrange[value])
                 pixels[j] = (r, g, b)
         else:
