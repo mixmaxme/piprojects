@@ -26,8 +26,13 @@ for j in range(2,9):
 for i in range(288,270,-1):
     rearrange = rearrange + [i]
 
-# make an own json_body
-json_data = '{"pixel_id": 1, "pixel_r": 255, "pixel_g": 255, "pixel_b": 255, "pixel_a": 1}'
+# make the json_body magic
+json_list = []
+json_data_example = '{"pixel_id": 1, "pixel_r": 255, "pixel_g": 255, "pixel_b": 255, "pixel_a": 1}'
+
+class ImportJson(object):
+    def __init__(self, data):
+        self.__dict__ = json.loads(data)
 
 def addpixel():
     global i
@@ -37,7 +42,7 @@ def addpixel():
 @sio.event('s_change_pixel')
 def pixel_on(json_data):
     # Load json body
-    parsed_json = (json.loads(json_data))
+    parsed_json = ImportJson(json_data)
 
     # Iterate through every line in the json body
     for line in parsed_json:
@@ -86,4 +91,4 @@ sio.connect('http://localhost:1234')
 
 
 print("Shabs konnetn")
-pixel_on(json_data)
+pixel_on(json_data_example)
