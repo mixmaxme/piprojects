@@ -51,8 +51,7 @@ def on_message(json_data):
     for line in json_data:
         if json_data['pixelR'] and json_data['pixelG'] and json_data['pixelB']:
             # import color and check brightness
-            r = int(int(json_data['pixelR'])*float(json_data['pixelA'])
-            r = 300
+            r = int(int(json_data['pixelR'])*float(json_data['pixelA'])6
             if r > 255:
                 r = 255
             g = int(int(json_data['pixelG'])*float(json_data['pixelA'])
