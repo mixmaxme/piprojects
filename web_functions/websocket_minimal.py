@@ -96,13 +96,13 @@ def on_message(json_data):
         print(json_data['pixelId'])
         print(json_data['pixelRow'])
         print(json_data['pixelCol'])
-        
-        if json_data['pixelId']: # if ID is not empty
+
+        if 'pixelId' in json_data: # if ID is not empty
             j = int(rearrange[int(json_data['pixelId'])])-1
             pixels.fill((0,0,0))
             pixels[j] = (r, g, b)
-        elif json_data['pixelCol']:
-            if json_data['pixelRow']:
+        elif 'pixelCol' in json_data:
+            if 'pixelRow' in json_data:
                 value = (18*(int(json_data['pixelRow'])) + int(json_data['pixelCol']) + 1)
                 j = int(rearrange[value])
                 pixels.fill((0,0,0))
