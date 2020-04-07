@@ -93,6 +93,10 @@ def on_message(json_data):
         else:
             continue
 
+        print(json_data['pixelId'])
+        print(json_data['pixelRow'])
+        print(json_data['pixelCol'])
+        
         if json_data['pixelId']: # if ID is not empty
             j = int(rearrange[int(json_data['pixelId'])])-1
             pixels.fill((0,0,0))
