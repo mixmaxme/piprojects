@@ -43,7 +43,7 @@ def addpixel():
 def on_message(json_data):
     # Load json body
     parsed_json = ImportJson(json_data)
-
+    print(parsed_json)
     # Iterate through every line in the json body
     for line in parsed_json:
         if line.pixel_r or line.pixel_g or line.pixel_b:
