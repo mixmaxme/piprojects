@@ -1,7 +1,7 @@
 # piprojects
 
 Website:
-- clock_index.html - STATUS: PHP Working - CGI and Color Picker not working.
+- clock_index.html - STATUS: WORKING (slow communication).
 - brightness.py - STATUS: WORKING 
   - php scripts - all working, one for every wordclock mode
   - php script / cgi script to get data from website not working
@@ -25,5 +25,6 @@ Misc
 - crontab - STATUS: GOOD
 - info - Links to important pages
 
-
-HTML Page with several buttons should be build, where the buttons start a shell-script that kills all wordclock-related running scripts and then starts the requested script (test if nohup and/or & is needed)
+Note:
+HTML page has to be stored in correct folder/Apache has to be reconfigured - correct access rights to work. Access rights too open for public network.
+For CGI-Bin to work
