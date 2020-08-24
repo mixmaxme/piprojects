@@ -4,7 +4,7 @@ Website:
 - clock_index.html - STATUS: WORKING (slow communication).
 - brightness.py - STATUS: WORKING 
   - php scripts - all working, one for every wordclock mode
-  - php script / cgi script to get data from website not working
+  - php script / cgi script to get data from website - working
 
 Wordclock Modes
 - max_wordclock_short.py - STATUS: GOOD
