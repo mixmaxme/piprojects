@@ -52,7 +52,7 @@ while getopts ":abcdefmpqrtw" options; do              # Loop: Get the next opti
       ;;
     w)                                      
       echo "Starting Wordclock"
-      sudo python /home/pi/piprojects/clock_functions/max_wordclock_short.py
+      sudo python /home/pi/piprojects/clock_functions/wordclock.py
       ;;
     \? )
       echo "Usage: ./start_wordclock_scripts.sh [-w/p/f]"
