@@ -26,5 +26,6 @@ Misc
 - info - Links to important pages
 
 Note:
-HTML page has to be stored in correct folder/Apache has to be reconfigured - correct access rights to work. Access rights too open for public network.
-For CGI-Bin to work
+HTML page has to be stored in correct folder/Apache has to be reconfigured - correct access rights to work (change webpages hosting "home addres". 
+Access rights too open for public network.
+For CGI-Bin --> configuration of apache
